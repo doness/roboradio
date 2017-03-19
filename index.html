@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Todo:
+    Genre buttons- this row goes above animation wrapper
+    label: Genre.    buttons: prev, next, with display in the middle that says which genre is currently playing
+
+    Menu - Home, Genres, Favorites, Skins, About
+    Each of these hides the station-buttons section and the anim-wrapper
+
+    Home - makes player re-appear.
+    genres - displays all genres as buttons / list
+    about - shows info about app, and contact info
+
+    borders - anim-wrapper, app wrapper, station info, maybe try red or orange and make a theme css sheet for the accent colors. OR change this all with JS css props.
+    Button colors- style to use google material design pallete
+    Change buttons to include only 6 per genre.  add a favorite icon to book mark the station [in the player buttons row]
+    Get the player working/streaming and start/stopping the animation
+    Program the player state object
+    curate stations and get the genre objects written
+    test/program the logic on the app player and animations
+
+    Things to add later:
+
+    favorites - displays your favorite stations
+    color themes skins / stylesheet switching
+    Save favorites to session cookie / add favorite button.
+    Database backend with 0auth user-login to save favorite stations.
+
+    -->
+    <meta charset="UTF-8">
+    <title>Robo-Radio</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/animate.css-master/animate.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="app">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="station-info">
+                <h4 class="text-center" id="station-name">
+                    Z-Rock WZRK 98.7
+                </h4>
+                <h5 class="text-center genre-text">Modern Rock  &nbsp; <span> <i class="glyphicon glyphicon-star-empty"></i></span></h5>
+
+            </div>
+
+
+            <div id="anim-wrapper">
+                <img src="images/record.png" class="stopped" id="animation">
+            </div>
+        </div><!--COLUMN -->
+
+        <div class="col-xs-12">
+
+            <div class="genre-flex">
+
+                <button class="genre-item">
+                    1
+                </button>
+                <button class="genre-item">
+                    2
+                </button>
+                <button class="genre-item">
+                    3
+                </button><br/>
+                <button class="genre-item">
+                    4
+                </button>
+                <button class="genre-item">
+                    5
+                </button>
+                <button class="genre-item">
+                    6
+                </button>
+                <br/>
+                <p class="text-center">
+                    <button class="genre-item">Prev Genre</button>
+                    <button class="genre-item">Next Genre</button>
+                </p>
+
+
+            </div>
+
+        </div><!-- col -->
+
+        <div class="col-xs-12">
+            <div class="button-panel">
+                <h3 class="text-center">
+                    <i class="glyphicon glyphicon-asterisk"></i>
+                    <i class="glyphicon glyphicon-step-backward"></i>
+                    <i class="glyphicon glyphicon-play"></i>
+                    <i class="glyphicon glyphicon-step-forward"></i>
+                    <i class="glyphicon glyphicon-pause"></i>
+                </h3>
+            </div>
+        </div>
+
+    </div><!--row -->
+
+
+
+</div>
+</section>
+</body>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+</html>
