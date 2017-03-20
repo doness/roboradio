@@ -50,8 +50,11 @@ var genres = [
 ]
 
 
-//var bluestest =  new Audio('http://50.7.98.106:8719/;stream.nsv&type=mp3');
-//bluestest.play();
+var bluestest =  new Audio('http://50.7.98.106:8719/;stream.nsv&type=mp3');
+function workaround(){
+    bluestest.play();
+}
+
 
 
 function play(newStation){
@@ -94,7 +97,9 @@ function startStopper(){
 
 $(document).ready(function(){
 
-
+    $("#1").click(function(){
+        workaround();
+    });
     startStopper();
 
 
