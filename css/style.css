@@ -99,7 +99,7 @@ background-color: #DC143C;
     transform: scale(1.1, 1.1);
 }
 
-#station-info {
+.station-info {
     border-radius: 20px;
     background-color: #212121;
     font-size: 1.7em;
