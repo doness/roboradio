@@ -7,26 +7,45 @@ var player = {
     paused: true,
 }
 
+var musicarray = [
+    [
+        {
+            info: "bar-legends",
+            url: "http://50.7.98.106:8719/;stream.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 0,
+        },
+        {
+            info: "blues-after-hours",
+            url: "http://46.23.68.170:8108/;stream.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 1,
+        }
+    ],
+    [
+        {
+            info: "blues-after-hours",
+            url: "http://46.23.68.170:8108/;stream.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 1,
+        },
+        {
+            info: "blues-after-hours",
+            url: "http://46.23.68.170:8108/;stream.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 1,
+        }
+    ]
+]
 
-var music = {
-   blues:  [
-        0,
-       {
-           info: "bar-legends",
-           url: "http://50.7.98.106:8719/;stream.nsv&type=mp3",
-           genre: "blues",
-           genreNumber: 0,
-           stationNumber: 1,
-       },
-       {
-           info: "blues-after-hours",
-           url: "http://46.23.68.170:8108/;stream.nsv&type=mp3",
-           genre: "blues",
-           genreNumber: 0,
-           stationNumber: 1,
-       }
-   ],
-}
+
+var genres = [
+    "blues", "rock", "pop", "electronic", "rap",
+]
 
 
 var bluestest = "http://50.7.98.106:8719/;stream.nsv&type=mp3";
@@ -53,7 +72,7 @@ function startStopper(){
             $($animation).removeClass("stopped");
             $($animation).addClass("spinning");
             $($animWrapper).addClass("pulsing");
-            play(music.blues[1]);
+            play(musicarray[0][0]);
 
         } else {
             $($animation).removeClass("spinning");
