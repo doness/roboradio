@@ -5,6 +5,8 @@ var $audio = document.getElementById("audio");
 var player = {
     station: "",
     paused: true,
+    genreNumber: 0,
+    stationNumber: 0,
 }
 
 var musicarray = [
@@ -44,7 +46,7 @@ var musicarray = [
 
 
 var genres = [
-    "blues", "rock", "pop", "electronic", "rap",
+    "blues", "rock", "pop", "electronic", "rap", "country",
 ]
 
 
@@ -54,7 +56,7 @@ var bluestest = "http://50.7.98.106:8719/;stream.nsv&type=mp3";
 function play(newStation){
     player.station = newStation;
     player.paused = false;
-    player.genreNum = newStation.number;
+    player.genreNumber = newStation.number;
     player.stationNumber = newStation.stationNumber;
     $($audio).attr("src", newStation.url);
     document.getElementById("station-text").innerHTML = newStation.info;
