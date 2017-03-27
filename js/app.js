@@ -1,52 +1,51 @@
 var $animation = document.getElementById("animation");
 var $animWrapper = document.getElementById("anim-wrapper");
-var button1 = document.getElementById("1");
-var button2 = document.getElementById("2");
 
-var totalGenres = 1;
+
+
 var musicarray = [
 
-    // BLUES GENRE
+    //POP GENRE
     [
         {
-            info: "Bar-legends",
-            url: "http://50.7.98.106:8719/;stream.nsv&type=mp3",
-            genre: "blues",
+            info: "QMR Sugar Radio",
+            url: "http://78.129.146.97:7108/stream.nsv&type=mp3",
+            genre: "Pop",
             genreNumber: 0,
             stationNumber: 0
         },
         {
-            info: "Deep Jams",
-            url: "http://74.50.122.103:9748/;stream.nsv&type=mp3",
-            genre: "blues",
+            info: "Phoenix Radio",
+            url: "http://80.195.148.109:3384/;stream.nsv&type=mp3",
+            genre: "Pop",
             genreNumber: 0,
             stationNumber: 1
         },
         {
-            info: "Music City Roadhouse",
-            url: "http://stereo.wavestreamer.com:5022/;stream.nsv&type=mp3",
-            genre: "blues",
+            info: "Teen FM",
+            url: "http://82.223.28.90:8091/stream.nsv&type=mp3",
+            genre: "Pop",
             genreNumber: 0,
             stationNumber: 2
         },
         {
-            info: "big Blues Swing",
-            url: "http://www.bigblueswing.com:8002/;stream.nsv&type=mp3",
-            genre: "blues",
+            info: "StarDusk FM",
+            url: "http://206.190.136.141:1966/Live;stream.nsv&type=mp3",
+            genre: "Pop",
             genreNumber: 0,
             stationNumber: 3
         },
         {
-            info: "Caledonia\'s",
-            url: "http://66.55.82.222:8031/;stream.nsv&type=mp3",
-            genre: "blues",
+            info: "Plus Radio",
+            url: "http://170.75.144.250:13338/;stream.nsv&type=mp3",
+            genre: "Pop",
             genreNumber: 0,
             stationNumber: 4
         },
         {
-            info: "Blues Rock Audiophile",
-            url: "http://8.38.78.173:8240/;steam.nsv&type=mp3",
-            genre: "blues",
+            info: "POP FM 98.7",
+            url: "http://158.69.242.81:4052/stream.nsv&type=mp3",
+            genre: "Pop",
             genreNumber: 0,
             stationNumber: 5
         }
@@ -99,47 +98,47 @@ var musicarray = [
 
     ],
 
-    //POP GENRE
+    // BLUES GENRE
     [
         {
-            info: "Phoenix Radio",
-            url: "http://80.195.148.109:3384/;stream.nsv&type=mp3",
-            genre: "Pop",
+            info: "Bar-legends",
+            url: "http://50.7.98.106:8719/;stream.nsv&type=mp3",
+            genre: "blues",
             genreNumber: 2,
             stationNumber: 0
         },
         {
-            info: "Teen FM",
-            url: "http://82.223.28.90:8091/stream.nsv&type=mp3",
-            genre: "Pop",
+            info: "Deep Jams",
+            url: "http://74.50.122.103:9748/;stream.nsv&type=mp3",
+            genre: "blues",
             genreNumber: 2,
             stationNumber: 1
         },
         {
-            info: "QMR Sugar Radio",
-            url: "http://78.129.146.97:7108/stream.nsv&type=mp3",
-            genre: "Pop",
+            info: "Music City Roadhouse",
+            url: "http://stereo.wavestreamer.com:5022/;stream.nsv&type=mp3",
+            genre: "blues",
             genreNumber: 2,
             stationNumber: 2
         },
         {
-            info: "StarDusk FM",
-            url: "http://206.190.136.141:1966/Live;stream.nsv&type=mp3",
-            genre: "Pop",
+            info: "big Blues Swing",
+            url: "http://www.bigblueswing.com:8002/;stream.nsv&type=mp3",
+            genre: "blues",
             genreNumber: 2,
             stationNumber: 3
         },
         {
-            info: "Plus Radio",
-            url: "http://170.75.144.250:13338/;stream.nsv&type=mp3",
-            genre: "Pop",
+            info: "Caledonia\'s",
+            url: "http://66.55.82.222:8031/;stream.nsv&type=mp3",
+            genre: "blues",
             genreNumber: 2,
             stationNumber: 4
         },
         {
-            info: "POP FM 98.7",
-            url: "http://158.69.242.81:4052/stream.nsv&type=mp3",
-            genre: "Pop",
+            info: "Blues Rock Audiophile",
+            url: "http://8.38.78.173:8240/;steam.nsv&type=mp3",
+            genre: "blues",
             genreNumber: 2,
             stationNumber: 5
         }
