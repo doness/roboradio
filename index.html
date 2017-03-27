@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8" />
     <!--
     Todo:
-    Genre buttons- this row goes above animation wrapper
-    label: Genre.    buttons: prev, next, with display in the middle that says which genre is currently playing
+
+    program play button, pause button
+    Get everything separated into their own methods
+
 
     Menu - Home, Genres, Favorites, Skins, About
     Each of these hides the station-buttons section and the anim-wrapper
@@ -67,9 +70,9 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="station-info">
-                <h4 class="text-center" id="station-text">
+                <h1 class="text-center" id="station-text">
                     Welcome to Robo-radio
-                </h4>
+                </h1>
                 <h5 class="text-center" id="genre-text">Version 1.0</h5>
 
             </div>
@@ -86,45 +89,35 @@
 
             <div class="genre-flex">
 
-                <button class="genre-item" id="1">
-                    1
-                </button>
-                <button class="genre-item">
-                    2
-                </button>
-                <button class="genre-item">
-                    3
-                </button><br/>
-                <button class="genre-item">
-                    4
-                </button>
-                <button class="genre-item">
-                    5
-                </button>
-                <button class="genre-item">
-                    6
-                </button>
-                <br/>
-                <p class="text-center">
-                    <button class="genre-item">Prev Genre</button>
-                    <button class="genre-item">Next Genre</button>
-                </p>
+                <button class="number-button" id="1">1</button>
+                <button class="number-button" id="2">2</button>
+                <button class="number-button" id="3">3</button>
 
+                <button class="number-button" id="4">4</button>
+                <button class="number-button" id="5">5</button>
+                <button class="number-button" id="6">6</button>
 
-            </div>
+                </div>
+
 
         </div><!-- col -->
 
         <div class="col-xs-12">
-            <div class="button-panel">
-                <h3 class="text-center">
-                    <i class="glyphicon glyphicon-asterisk"></i>
-                    <i class="glyphicon glyphicon-step-backward"></i>
-                    <i class="glyphicon glyphicon-play"></i>
-                    <i class="glyphicon glyphicon-step-forward"></i>
-                    <i class="glyphicon glyphicon-pause"></i>
-                </h3>
+
+
+            <div class="player-buttons-flex">
+
+                <button class="genre-next" id="genre-next">Genre </button>
+                <button id="random">Random</button>
+
+                <button id="step-forward"><i class="glyphicon glyphicon-step-forward"></i></button>
+                <button id="playPause"><i class="glyphicon glyphicon-play"></i><i class="glyphicon glyphicon-pause"></i></button>
+
+
             </div>
+
+
+
         </div>
 
 
@@ -134,7 +127,7 @@
 
 </div>
 </section>
-<audio id="audio" autoplay></audio>
+
 
 
 </body>
