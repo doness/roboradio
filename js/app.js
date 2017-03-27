@@ -9,7 +9,7 @@ var musicarray = [
     //GENRE BLUES
     [
         {
-            info: "bar-legends",
+            info: "Bar-legends",
             url: "http://50.7.98.106:8719/;stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 0,
@@ -28,6 +28,27 @@ var musicarray = [
             genre: "blues",
             genreNumber: 0,
             stationNumber: 2
+        },
+        {
+            info: "big Blues Swing",
+            url: "http://www.bigblueswing.com:8002/;stream.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 3
+        },
+        {
+            info: "Caledonias",
+            url: "http://66.55.82.222:8031/;stream.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 4
+        },
+        {
+            info: "Blues Rock Audiophile",
+            url: "http://8.38.78.173:8240/;steam.nsv&type=mp3",
+            genre: "blues",
+            genreNumber: 0,
+            stationNumber: 5
         }
     ],
 
@@ -144,9 +165,12 @@ $("#step-forward").click(function(){
     if (player.stationNumber < musicarray[player.genreNumber].length -1) {
         setStation(musicarray[player.genreNumber][(player.stationNumber +1)]);
         playMusic();
-    } else {
+        console.log("Step-Forward " + player.station.info);
+    }
+    else {
         setStation(musicarray[player.genreNumber][0]);
         playMusic();
+        console.log("Step-Forward " + player.station.info);
     }
 
 });
@@ -155,12 +179,21 @@ $("#genre-next").click(function(){
     if (player.genreNumber < totalGenres){
         setStation( musicarray[ (player.genreNumber + 1) ][0] );
         playMusic();
+        console.log("Change to Genre " + player.station.genre);
     } else {
         setStation( musicarray[0][0] );
         playMusic();
+        console.log("Change to Genre " + player.station.genre);
     }
 });
 
+$("#random").click(function(){
+    pickGenre = Math.floor(Math.random() * musicarray.length);
+    pickSong = Math.floor(Math.random() * musicarray[pickGenre].length)
+    setStation(musicarray[pickGenre][pickSong]);
+    playMusic();
+    console.log("Picked random " + player.station.genre + " " + player.station.info);
+});
 
 
 
@@ -205,11 +238,7 @@ $("#6").click(function(){
 
 
 
-
-
-
-
-
+//jQuery ready function
 
 //$(document).ready(function(){
 //
