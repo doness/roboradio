@@ -6,7 +6,7 @@ var button2 = document.getElementById("2");
 var totalGenres = 1;
 var musicarray = [
 
-    //GENRE BLUES
+    // BLUES GENRE
     [
         {
             info: "Bar-legends",
@@ -37,7 +37,7 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "Caledonias",
+            info: "Caledonia\'s",
             url: "http://66.55.82.222:8031/;stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 0,
@@ -52,45 +52,146 @@ var musicarray = [
         }
     ],
 
-    //GENRE BlUES TWO
+    //ELECTRO GENRE
     [
         {
-            info: "big Blues Swing",
-            url: "http://www.bigblueswing.com:8002/;stream.nsv&type=mp3",
-            genre: "blues two",
+            info: "CannibalRadio",
+            url: "http://213.239.206.179:8238/stream.nsv&type=mp3",
+            genre: "Electro",
             genreNumber: 1,
             stationNumber: 0
         },
         {
-            info: "blues-after-hours",
-            url: "http://46.23.68.170:8108/;stream.nsv&type=mp3",
-            genre: "blues two ",
+            info: "HouseBase.AT",
+            url: "http://5.175.227.187:8000/stream.nsv&type=mp3",
+            genre: "Electro",
             genreNumber: 1,
             stationNumber: 1
+        },
+        {
+            info: "D-radio",
+            url: "http://176.31.248.14:11198/stream.nsv&type=mp3",
+            genre: "Electro",
+            genreNumber: 1,
+            stationNumber: 2
+        },
+        {
+            info: "Horizon FM 24/7",
+            url: "http://185.27.140.54:8024/stream.nsv&type=mp3",
+            genre: "Electro",
+            genreNumber: 1,
+            stationNumber: 3
+        },
+        {
+            info: "SynthWay Radio",
+            url: "http://142.4.223.16:8380/stream.nsv&type=mp3",
+            genre: "Electro",
+            genreNumber: 1,
+            stationNumber: 4
+        },
+        {
+            info: "Z 103.5",
+            url: "http://166.62.44.23:8006/stream.nsv&type=mp3",
+            genre: "Electro",
+            genreNumber: 1,
+            stationNumber: 5
         }
+
     ],
+
+    //POP GENRE
+    [
+        {
+            info: "Phoenix Radio",
+            url: "http://80.195.148.109:3384/;stream.nsv&type=mp3",
+            genre: "Pop",
+            genreNumber: 2,
+            stationNumber: 0
+        },
+        {
+            info: "Teen FM",
+            url: "http://82.223.28.90:8091/stream.nsv&type=mp3",
+            genre: "Pop",
+            genreNumber: 2,
+            stationNumber: 1
+        },
+        {
+            info: "QMR Sugar Radio",
+            url: "http://78.129.146.97:7108/stream.nsv&type=mp3",
+            genre: "Pop",
+            genreNumber: 2,
+            stationNumber: 2
+        },
+        {
+            info: "StarDusk FM",
+            url: "http://206.190.136.141:1966/Live;stream.nsv&type=mp3",
+            genre: "Pop",
+            genreNumber: 2,
+            stationNumber: 3
+        },
+        {
+            info: "Plus Radio",
+            url: "http://170.75.144.250:13338/;stream.nsv&type=mp3",
+            genre: "Pop",
+            genreNumber: 2,
+            stationNumber: 4
+        },
+        {
+            info: "POP FM 98.7",
+            url: "http://158.69.242.81:4052/stream.nsv&type=mp3",
+            genre: "Pop",
+            genreNumber: 2,
+            stationNumber: 5
+        }
+    ]
+
 
     //EMPTY GENRE
     //[
     //    {
-    //
+    //        info: "",
+    //        url: "stream.nsv&type=mp3",
+    //        genre: "",
+    //        genreNumber: 99,
+    //        stationNumber: 0
     //    },
     //    {
-    //
+    //        info: "",
+    //        url: "stream.nsv&type=mp3",
+    //        genre: "",
+    //        genreNumber: 99,
+    //        stationNumber: 1
     //    },
     //    {
-    //
+    //        info: "",
+    //        url: "stream.nsv&type=mp3",
+    //        genre: "",
+    //        genreNumber: 99,
+    //        stationNumber: 2
     //    },
     //    {
-    //
+    //        info: "",
+    //        url: "stream.nsv&type=mp3",
+    //        genre: "",
+    //        genreNumber: 99,
+    //        stationNumber: 3
     //    },
     //    {
-    //
+    //        info: "",
+    //        url: "stream.nsv&type=mp3",
+    //        genre: "",
+    //        genreNumber: 99,
+    //        stationNumber: 4
     //    },
     //    {
-    //
+    //        info: "",
+    //        url: "stream.nsv&type=mp3",
+    //        genre: "",
+    //        genreNumber: 99,
+    //        stationNumber: 5
     //    }
     //]
+
 
 
 ];
@@ -176,7 +277,7 @@ $("#step-forward").click(function(){
 });
 
 $("#genre-next").click(function(){
-    if (player.genreNumber < totalGenres){
+    if (player.genreNumber < musicarray.length -1){
         setStation( musicarray[ (player.genreNumber + 1) ][0] );
         playMusic();
         console.log("Change to Genre " + player.station.genre);
