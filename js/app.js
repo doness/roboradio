@@ -142,7 +142,238 @@ var musicarray = [
             genreNumber: 2,
             stationNumber: 5
         }
+    ],
+
+    //Classic Rock
+    [
+        {
+            info: "Rock Radio SI",
+            url: "http://212.18.63.135:9034/rock;stream.nsv&type=mp3",
+            genre: "Classic Rock",
+            genreNumber: 3,
+            stationNumber: 0
+        },
+        {
+            info: "Beatles Radio",
+            url: "http://64.40.99.76:8000/;stream.nsv&type=mp3",
+            genre: "Classic Rock",
+            genreNumber: 3,
+            stationNumber: 1
+        },
+        {
+            info: "Classic Rock 109",
+            url: "http://198.27.70.42:10042/stream.nsv&type=mp3",
+            genre: "Classic Rock",
+            genreNumber: 3,
+            stationNumber: 2
+        },
+        {
+            info: "Bob FM",
+            url: "http://173.192.70.138:8980/stream.nsv&type=mp3",
+            genre: "Classic Rock",
+            genreNumber: 3,
+            stationNumber: 3
+        },
+        {
+            info: "Classic Rock New York",
+            url: "http://45.79.186.124:8351/stream.nsv&type=mp3",
+            genre: "Classic Rock",
+            genreNumber: 3,
+            stationNumber: 4
+        },
+        {
+            info: "JUST Classic Rock",
+            url: "http://199.168.117.61:8026/stream.nsv&type=mp3",
+            genre: "Classic Rock",
+            genreNumber: 3,
+            stationNumber: 5
+        }
+    ],
+
+    //HIP HOP GENRE
+    [
+        {
+            info: "POWER HITZ",
+            url: "http://66.85.88.174/1power?stream.nsv&type=mp3",
+            genre: "Hip Hop",
+            genreNumber: 4,
+            stationNumber: 0
+        },
+        {
+            info: "HOT 108 JAMZ",
+            url: "http://66.85.88.174/hot108?stream.nsv&type=mp3",
+            genre: "Hip Hop",
+            genreNumber: 4,
+            stationNumber: 1
+        },
+        {
+            info: "BREAKZ.FM",
+            url: "http://46.4.121.133:8100/stream128?stream.nsv&type=mp3",
+            genre: "Hip Hop",
+            genreNumber: 4,
+            stationNumber: 2
+        },
+        {
+            info: "BEAT FM ",
+            url: "http://89.105.32.27/beat128.mp3?stream.nsv&type=mp3",
+            genre: "Hip Hop",
+            genreNumber: 4,
+            stationNumber: 3
+        },
+        {
+            info: "103.7 DA BEAT",
+            url: "http://46.105.122.141:8742/;?stream.nsv&type=mp3",
+            genre: "Hip Hop",
+            genreNumber: 4,
+            stationNumber: 4
+        },
+        {
+            info: "WWMR 105 THE HEAT",
+            url: "http://38.107.243.187:8000/stream?stream.nsv&type=mp3",
+            genre: "Hip Hop",
+            genreNumber: 4,
+            stationNumber: 5
+        }
+    ],
+
+    //RAP GENRE
+    [
+        {
+            info: "TTTRadio.NET",
+            url: "http://69.143.55.164/;?stream.nsv&type=mp3",
+            genre: "Rap",
+            genreNumber: 5,
+            stationNumber: 0
+        },
+        {
+            info: "HHAD Series",
+            url: "http://listen.radionomy.com/HHADseries?stream.nsv&type=mp3",
+            genre: "Rap",
+            genreNumber: 5,
+            stationNumber: 1
+        },
+        {
+            info: "STREETLIVE",
+            url: "http://listen.radionomy.com/StreetLive?stream.nsv&type=mp3",
+            genre: "Rap",
+            genreNumber: 5,
+            stationNumber: 2
+        },
+        {
+            info: "East Coast HIP HOP 90s",
+            url: "http://listen.radionomy.com/EastCoastHip-Hop90-s?stream.nsv&type=mp3",
+            genre: "Rap",
+            genreNumber: 5,
+            stationNumber: 3
+        },
+        {
+            info: "POWER 101.8 New York",
+            url: "http://206.190.136.141:4383/Live?stream.nsv&type=mp3",
+            genre: "Rap",
+            genreNumber: 5,
+            stationNumber: 4
+        },
+        {
+            info: "Peach Radio",
+            url: "http://38.135.36.74:8018/peach?stream.nsv&type=mp3",
+            genre: "Rap",
+            genreNumber: 5,
+            stationNumber: 5
+        }
+    ],
+
+    //CHILLOUT GENRE
+    [
+        {
+            info: "The Buzzout Room",
+            url: "http://149.56.183.178:8034/stream?icy=http",
+            genre: "Chillout",
+            genreNumber: 6,
+            stationNumber: 0
+        },
+        {
+            info: "Nebula",
+            url: "http://eu.radioboss.fm:8224/live?stream.nsv&type=mp3",
+            genre: "Chillout",
+            genreNumber: 6,
+            stationNumber: 1
+        },
+        {
+            info: "PASSPORT",
+            url: "http://listen.radionomy.com/Passport?stream.nsv&type=mp3",
+            genre: "Chillout",
+            genreNumber: 6,
+            stationNumber: 2
+        },
+        {
+            info: "The Smooth Chill",
+            url: "http://listen.radionomy.com/TheSmoothChill?stream.nsv&type=mp3",
+            genre: "Chillout",
+            genreNumber: 6,
+            stationNumber: 3
+        },
+        {
+            info: "TriChrome World Radio",
+            url: "http://173.192.105.231:1309/Live?stream.nsv&type=mp3",
+            genre: "Chillout",
+            genreNumber: 6,
+            stationNumber: 4
+        },
+        {
+            info: "Gabriel\'s Smooth Drops",
+            url: "http://5.2.229.172:9876/;?stream.nsv&type=mp3",
+            genre: "Chillout",
+            genreNumber: 6,
+            stationNumber: 5
+        }
+    ],
+
+    //EMPTY GENRE
+    [
+        {
+            info: "DUBSTEP.FM",
+            url: "http://stream.dubstep.fm/64mp3?stream.nsv&type=mp3",
+            genre: "Dubstep",
+            genreNumber: 7,
+            stationNumber: 0
+        },
+        {
+            info: "DEF RADIO STATION",
+            url: "http://168.235.84.148:8000/;?stream.nsv&type=mp3",
+            genre: "Dubstep",
+            genreNumber: 7,
+            stationNumber: 1
+        },
+        {
+            info: "ALTERNIA FM",
+            url: "http://listen.radionomy.com/AlterniaFM2017?stream.nsv&type=mp3",
+            genre: "Dubstep",
+            genreNumber: 7,
+            stationNumber: 2
+        },
+        {
+            info: "HOP SKIP \&DubStep",
+            url: "http://192.240.102.131:7637/stream?stream.nsv&type=mp3",
+            genre: "Dubstep",
+            genreNumber: 7,
+            stationNumber: 3
+        },
+        {
+            info: "SubSonic FM Radio",
+            url: "http://198.27.80.205:5768/stream?stream.nsv&type=mp3",
+            genre: "Dubstep",
+            genreNumber: 7,
+            stationNumber: 4
+        },
+        {
+            info: "EDM Colorado Ch.2",
+            url: "http://38.107.242.58:8010/edmco2?stream.nsv&type=mp3",
+            genre: "Dubstep",
+            genreNumber: 7,
+            stationNumber: 5
+        }
     ]
+
 
 
     //EMPTY GENRE
