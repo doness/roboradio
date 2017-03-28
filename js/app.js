@@ -1,4 +1,4 @@
-//  RoboRadio JavaScript Streaming Player by MSR Interactive 
+//  RoboRadio JavaScript Streaming Player by MSR Interactive
 
 var $animation = document.getElementById("animation");
 var $animWrapper = document.getElementById("anim-wrapper");
@@ -780,8 +780,8 @@ var musicarray = [
             stationNumber: 4
         },
         {
-            info: "Third Wave Ska",
-            url: "http://206.190.136.141:2735/Live?stream.nsv&type=mp3",
+            info: "K O Mumyong Radio",
+            url: "http://144.217.129.213:9942/stream?stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 16,
             stationNumber: 5
