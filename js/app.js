@@ -782,7 +782,7 @@ var musicarray = [
         {
             info: "K O Mumyong Radio",
             url: "http://144.217.129.213:9942/stream?stream.nsv&type=mp3",
-            genre: "SKA PUNK",
+            genre: "K pop",
             genreNumber: 16,
             stationNumber: 5
         }
