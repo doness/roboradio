@@ -839,28 +839,28 @@ var musicarray = [
         {
             info: "Radio Classic Mozart ",
             url: "http://37.251.146.169:8300/stream?stream.nsv&type=mp3",
-            genre: "Classical Symphony",
+            genre: "Classical",
             genreNumber: 18,
             stationNumber: 0
         },
         {
             info: "SignPilot LLC",
             url: "http://198.143.144.226:8037/stream?stream.nsv&type=mp3",
-            genre: "Classical Symphony",
+            genre: "Classical",
             genreNumber: 18,
             stationNumber: 1
         },
         {
             info: "Radio Classic Romania",
             url: "http://37.251.146.169:8000/stream?stream.nsv&type=mp3",
-            genre: "Classical Symphony",
+            genre: "Classical",
             genreNumber: 18,
             stationNumber: 2
         },
         {
             info: "Radio Classic Beethoven",
             url: "http://37.251.146.169:7200/stream2?stream.nsv&type=mp3",
-            genre: "Classical Symphony",
+            genre: "Classical",
             genreNumber: 18,
             stationNumber: 3
         },
@@ -868,14 +868,14 @@ var musicarray = [
             info: "Wayyradio Piano Classical",
             url: "http://37.59.42.207:8367/stream?stream.nsv&type=mp3",
             genre: "Classical",
-            genreNumber: 19,
+            genreNumber: 18,
             stationNumber: 0
         },
         {
             info: "Radio Music101 Piano",
             url: "http://37.59.42.207:8559/stream2?stream.nsv&type=mp3",
             genre: "Classical",
-            genreNumber: 19,
+            genreNumber: 18,
             stationNumber: 1
         }
     ],
