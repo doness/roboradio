@@ -51,47 +51,47 @@ var musicarray = [
         }
     ],
 
-    //ELECTRO GENRE
+    //EDM GENRE
     [
         {
-            info: "CannibalRadio",
-            url: "http://213.239.206.179:8238/stream.nsv&type=mp3",
-            genre: "Electro",
+            info: "Radio Hunter",
+            url: "http://listen.shoutcast.com/radiohunter-theelectronicchannel?stream.nsv&type=mp3",
+            genre: "EDM",
             genreNumber: 1,
             stationNumber: 0
         },
         {
-            info: "HouseBase.AT",
-            url: "http://5.175.227.187:8000/stream.nsv&type=mp3",
-            genre: "Electro",
+            info: "DEEP FM.AT",
+            url: "http://195.66.134.42/sd?stream.nsv&type=mp3",
+            genre: "EDM",
             genreNumber: 1,
             stationNumber: 1
         },
         {
-            info: "D-radio",
-            url: "http://176.31.248.14:11198/stream.nsv&type=mp3",
-            genre: "Electro",
+            info: "RadioParty.PL",
+            url: "http://176.31.240.87:8000/rp.mp3?stream.nsv&type=mp3",
+            genre: "EDM",
             genreNumber: 1,
             stationNumber: 2
         },
         {
-            info: "Horizon FM 24/7",
-            url: "http://185.27.140.54:8024/stream.nsv&type=mp3",
-            genre: "Electro",
+            info: "PulseRadio Dance",
+            url: "http://178.32.98.117/pulsHD.mp3?stream.nsv&type=mp3",
+            genre: "EDM",
             genreNumber: 1,
             stationNumber: 3
         },
         {
-            info: "SynthWay Radio",
-            url: "http://142.4.223.16:8380/stream.nsv&type=mp3",
-            genre: "Electro",
+            info: "Electric FM",
+            url: "http://listen.shoutcast.com/electricfmamericasrealdance?stream.nsv&type=mp3",
+            genre: "EDM",
             genreNumber: 1,
             stationNumber: 4
         },
         {
-            info: "Z 103.5",
-            url: "http://166.62.44.23:8006/stream.nsv&type=mp3",
-            genre: "Electro",
+            info: "VirtualDJ Radio",
+            url: "http://52.0.120.216:8000/channel1.mp3?stream.nsv&type=mp3",
+            genre: "EDM",
             genreNumber: 1,
             stationNumber: 5
         }
@@ -246,22 +246,22 @@ var musicarray = [
             stationNumber: 0
         },
         {
-            info: "HHAD Series",
-            url: "http://listen.radionomy.com/HHADseries?stream.nsv&type=mp3",
+            info: "AOH Radio",
+            url: "http://206.190.136.141:3317/Live?stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
             stationNumber: 1
         },
         {
-            info: "STREETLIVE",
-            url: "http://listen.radionomy.com/StreetLive?stream.nsv&type=mp3",
+            info: "Unsigned Hype Hip Hop",
+            url: "http://51.255.83.127:9597/Live?stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
             stationNumber: 2
         },
         {
-            info: "East Coast HIP HOP 90s",
-            url: "http://listen.radionomy.com/EastCoastHip-Hop90-s?stream.nsv&type=mp3",
+            info: "Liquid Hip Hop",
+            url: "http://198.105.214.140:1806/Live?stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
             stationNumber: 3
@@ -299,15 +299,15 @@ var musicarray = [
             stationNumber: 1
         },
         {
-            info: "PASSPORT",
-            url: "http://listen.radionomy.com/Passport?stream.nsv&type=mp3",
+            info: "Ambient Sleeping Pill",
+            url: "http://176.31.107.8:8446/stream?stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
             stationNumber: 2
         },
         {
-            info: "The Smooth Chill",
-            url: "http://listen.radionomy.com/TheSmoothChill?stream.nsv&type=mp3",
+            info: "Digital Impulse Ambient Fantasy",
+            url: "http://5.39.71.159:8193/stream?stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
             stationNumber: 3
@@ -328,7 +328,7 @@ var musicarray = [
         }
     ],
 
-    //EMPTY GENRE
+    //Dubstep GENRE
     [
         {
             info: "DUBSTEP.FM",
@@ -338,15 +338,15 @@ var musicarray = [
             stationNumber: 0
         },
         {
-            info: "DEF RADIO STATION",
-            url: "http://168.235.84.148:8000/;?stream.nsv&type=mp3",
+            info: "Dubstep Radio .FM",
+            url: "http://198.15.94.34:8018/stream?stream.nsv&type=mp3",
             genre: "Dubstep",
             genreNumber: 7,
             stationNumber: 1
         },
         {
-            info: "ALTERNIA FM",
-            url: "http://listen.radionomy.com/AlterniaFM2017?stream.nsv&type=mp3",
+            info: "Dance Factory",
+            url: "http://listen.radionomy.com/DanceFactory?stream.nsv&type=mp3",
             genre: "Dubstep",
             genreNumber: 7,
             stationNumber: 2
@@ -372,58 +372,564 @@ var musicarray = [
             genreNumber: 7,
             stationNumber: 5
         }
+    ],
+
+    // College Genre
+    [
+        {
+            info: "RADIO K KUOM",
+            url: "http://128.101.73.38:8256/;?stream.nsv&type=mp3",
+            genre: "College",
+            genreNumber: 8,
+            stationNumber: 0
+        },
+        {
+            info: "ACADEMY FM",
+            url: "http://37.187.93.104:8097/stream?stream.nsv&type=mp3",
+            genre: "College",
+            genreNumber: 8,
+            stationNumber: 1
+        },
+        {
+            info: "WHUS",
+            url: "http://158.69.225.238:7499/WHUS?stream.nsv&type=mp3",
+            genre: "College",
+            genreNumber: 8,
+            stationNumber: 2
+        },
+        {
+            info: "101.5 The Hawk",
+            url: "http://142.222.6.62:8000/stream/2/?stream.nsv&type=mp3",
+            genre: "College",
+            genreNumber: 8,
+            stationNumber: 3
+        },
+        {
+            info: "Guerrila Radio",
+            url: "http://174.37.16.73:8291/Live?stream.nsv&type=mp3",
+            genre: "College",
+            genreNumber: 8,
+            stationNumber: 4
+        },
+        {
+            info: "88.9 WQSU-FM The Pulse",
+            url: "http://198.105.214.140:9045/Live?stream.nsv&type=mp3",
+            genre: "College",
+            genreNumber: 8,
+            stationNumber: 5
+        }
+    ],
+
+    //MODERN COUNTRY GENRE
+    [
+        {
+            info: ".113FM Kickin Country",
+            url: "http://listen.shoutcast.com/113fmbigkickin-country?stream.nsv&type=mp3",
+            genre: "Modern Country",
+            genreNumber: 9,
+            stationNumber: 0
+        },
+        {
+            info: "New Country 93",
+            url: "http://173.192.70.138:9170/stream?stream.nsv&type=mp3",
+            genre: "Modern Country",
+            genreNumber: 9,
+            stationNumber: 1
+        },
+        {
+            info: "PowerHitz Total Country",
+            url: "http://66.85.88.174/country?stream.nsv&type=mp3",
+            genre: "Modern Country",
+            genreNumber: 9,
+            stationNumber: 2
+        },
+        {
+            info: "2 Country",
+            url: "http://listen.shoutcast.com/2Country?stream.nsv&type=mp3",
+            genre: "Modern Country",
+            genreNumber: 9,
+            stationNumber: 3
+        },
+        {
+            info: "In My Dreams Radio",
+            url: "http://158.69.135.138:8028/stream?stream.nsv&type=mp3",
+            genre: "Modern Country",
+            genreNumber: 9,
+            stationNumber: 4
+        },
+        {
+            info: "Calm Country Radio Now",
+            url: "http://184.173.142.117:13828/stream?stream.nsv&type=mp3",
+            genre: "Modern Country",
+            genreNumber: 9,
+            stationNumber: 5
+        }
+    ],
+
+    //Classic Country GENRE
+    [
+        {
+            info: "Today's Classic Country",
+            url: "http://108.163.197.114:8249/stream?stream.nsv&type=mp3",
+            genre: "Classic Country",
+            genreNumber: 10,
+            stationNumber: 0
+        },
+        {
+            info: "Gone Country",
+            url: "http://192.99.41.102:5044/stream?stream.nsv&type=mp3",
+            genre: "Classic Country",
+            genreNumber: 10,
+            stationNumber: 1
+        },
+        {
+            info: "Steel Radio",
+            url: "http://174.127.82.223:16230/stream?stream.nsv&type=mp3",
+            genre: "Classic Country",
+            genreNumber: 10,
+            stationNumber: 2
+        },
+        {
+            info: "DI Radio Digital Impulse",
+            url: "http://5.39.71.159:8110/stream?stream.nsv&type=mp3",
+            genre: "Classic Country",
+            genreNumber: 10,
+            stationNumber: 3
+        },
+        {
+            info: "Outback Radio",
+            url: "http://104.250.155.162:9980/stream?stream.nsv&type=mp3",
+            genre: "Classic Country",
+            genreNumber: 10,
+            stationNumber: 4
+        },
+        {
+            info: "ThrowBack Country",
+            url: "http://192.99.177.195:8026/stream?stream.nsv&type=mp3",
+            genre: "Classic Country",
+            genreNumber: 10,
+            stationNumber: 5
+        }
+    ],
+
+    //Hard Rock GENRE
+    [
+        {
+            info: "XXXrock.FM",
+            url: "http://23.29.71.154:8140/stream?stream.nsv&type=mp3",
+            genre: "Hard Rock",
+            genreNumber: 11,
+            stationNumber: 0
+        },
+        {
+            info: "Rock Melodic Radio",
+            url: "http://37.59.14.77:8124/stream?stream.nsv&type=mp3",
+            genre: "Hard Rock",
+            genreNumber: 11,
+            stationNumber: 1
+        },
+        {
+            info: "RockXradio",
+            url: "http://158.69.227.214:8000/stream?stream.nsv&type=mp3",
+            genre: "Hard Rock",
+            genreNumber: 11,
+            stationNumber: 2
+        },
+        {
+            info: "Sonora Classic Rock \& Metal",
+            url: "http://46.105.122.141:6664/;?stream.nsv&type=mp3",
+            genre: "Hard Rock",
+            genreNumber: 11,
+            stationNumber: 3
+        },
+        {
+            info: "Digital Impulse Hard Rock",
+            url: "http://5.39.71.159:8165/stream?stream.nsv&type=mp3",
+            genre: "Hard Rock",
+            genreNumber: 11,
+            stationNumber: 4
+        },
+        {
+            info: "Hang10RockRadio",
+            url: "http://158.69.227.214:8113/stream?stream.nsv&type=mp3",
+            genre: "Hard Rock",
+            genreNumber: 11,
+            stationNumber: 5
+        }
+    ],
+
+    //METAL GENRE
+    [
+        {
+            info: "Metal Nation Radio",
+            url: "http://91.121.164.210:8380/stream?stream.nsv&type=mp3",
+            genre: "Metal",
+            genreNumber: 12,
+            stationNumber: 0
+        },
+        {
+            info: "Metal Rock Radio",
+            url: "http://192.99.62.212:9964/stream?stream.nsv&type=mp3",
+            genre: "Metal",
+            genreNumber: 12,
+            stationNumber: 1
+        },
+        {
+            info: "BrainGell Radio-BGR",
+            url: "http://5.189.142.165:8096/stream?stream.nsv&type=mp3",
+            genre: "Metal",
+            genreNumber: 12,
+            stationNumber: 2
+        },
+        {
+            info: "MetalHead Radio",
+            url: "http://198.178.121.76:8012/stream?stream.nsv&type=mp3",
+            genre: "Metal",
+            genreNumber: 12,
+            stationNumber: 3
+        },
+        {
+            info: "Prog Palace Radio",
+            url: "http://199.168.117.61:8006/stream?stream.nsv&type=mp3",
+            genre: "Metal",
+            genreNumber: 12,
+            stationNumber: 4
+        },
+        {
+            info: "Metalourgio",
+            url: "http://78.46.73.91:9043/stream?stream.nsv&type=mp3",
+            genre: "Metal",
+            genreNumber: 12,
+            stationNumber: 5
+        }
+    ],
+
+    //Rockabilly GENRE
+    [
+        {
+            info: "Rockin626.com",
+            url: "http://192.99.4.210:3574/stream?stream.nsv&type=mp3",
+            genre: "Rockabilly",
+            genreNumber: 13,
+            stationNumber: 0
+        },
+        {
+            info: "Bazooka Radio Psychobilly",
+            url: "http://86.105.205.246:30130/;?stream.nsv&type=mp3",
+            genre: "Rockabilly",
+            genreNumber: 13,
+            stationNumber: 1
+        },
+        {
+            info: "Streaming Billy",
+            url: "http://209.95.50.189:8066/stream?stream.nsv&type=mp3",
+            genre: "Rockabilly",
+            genreNumber: 13,
+            stationNumber: 2
+        },
+        {
+            info: "Elvis Presley Radio",
+            url: "http://37.59.42.207:8385/stream2?stream.nsv&type=mp3",
+            genre: "Rockabilly",
+            genreNumber: 13,
+            stationNumber: 3
+        },
+        {
+            info: "Daltons Radio",
+            url: "http://94.23.36.117:5210/stream?stream.nsv&type=mp3",
+            genre: "Rockabilly",
+            genreNumber: 13,
+            stationNumber: 4
+        },
+        {
+            info: "24/7 Rock N Roll",
+            url: "http://80.86.84.31:8130/stream?stream.nsv&type=mp3",
+            genre: "Rockabilly",
+            genreNumber: 13,
+            stationNumber: 5
+        }
+    ],
+
+    //Alternative GENRE
+    [
+        {
+            info: "AAC Plus Dreampop",
+            url: "http://78.47.96.202:8130/stream?stream.nsv&type=mp3",
+            genre: "Alternative",
+            genreNumber: 14,
+            stationNumber: 0
+        },
+        {
+            info: "CAYA Radio 90s",
+            url: "http://167.114.210.232:8105/stream?stream.nsv&type=mp3",
+            genre: "Alternative",
+            genreNumber: 14,
+            stationNumber: 1
+        },
+        {
+            info: "London Burning",
+            url: "http://192.99.4.210:3800/stream?stream.nsv&type=mp3",
+            genre: "Alternative",
+            genreNumber: 14,
+            stationNumber: 2
+        },
+        {
+            info: "CDNX Classic \& New Indie",
+            url: "http://109.123.70.138:8136/stream?stream.nsv&type=mp3",
+            genre: "Alternative",
+            genreNumber: 14,
+            stationNumber: 3
+        },
+        {
+            info: "Malfunction Radio",
+            url: "http://188.165.240.90:8424/stream?stream.nsv&type=mp3",
+            genre: "Alternative",
+            genreNumber: 14,
+            stationNumber: 4
+        },
+        {
+            info: "Brittania",
+            url: "http://5.189.151.48/;?stream.nsv&type=mp3",
+            genre: "Alternative",
+            genreNumber: 14,
+            stationNumber: 5
+        }
+    ],
+
+    //SKA PUNK GENRE
+    [
+        {
+            info: "RFP RADIO.com ",
+            url: "http://184.171.163.20:8210/stream?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 15,
+            stationNumber: 0
+        },
+        {
+            info: "Gutter Punk Radio",
+            url: "http://23.228.66.67:8000/;?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 15,
+            stationNumber: 1
+        },
+        {
+            info: "Celtic Folk Punk",
+            url: "http://69.175.94.98:8240/stream?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 15,
+            stationNumber: 2
+        },
+        {
+            info: "Radio No Futur",
+            url: "http://37.187.124.134:8100/;?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 15,
+            stationNumber: 3
+        },
+        {
+            info: "Punk Rock Demonstration",
+            url: "http://199.87.239.197:8000/;?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 15,
+            stationNumber: 4
+        },
+        {
+            info: "Third Wave Ska",
+            url: "http://206.190.136.141:2735/Live?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 15,
+            stationNumber: 5
+        }
+    ],
+
+    //K Pop GENRE
+    [
+        {
+            info: "K popway ",
+            url: "http://198.105.214.140:2684/Live?stream.nsv&type=mp3",
+            genre: "K pop",
+            genreNumber: 16,
+            stationNumber: 0
+        },
+        {
+            info: "Aewen Radio",
+            url: "http://37.72.100.39:8001/stream?stream.nsv&type=mp3",
+            genre: "K pop",
+            genreNumber: 16,
+            stationNumber: 1
+        },
+        {
+            info: "Kpop Replay",
+            url: "http://167.114.64.181:8325/stream?stream.nsv&type=mp3",
+            genre: "K pop",
+            genreNumber: 16,
+            stationNumber: 2
+        },
+        {
+            info: "Kpop top100",
+            url: "http://121.159.140.57:8000/128?stream.nsv&type=mp3",
+            genre: "K pop",
+            genreNumber: 16,
+            stationNumber: 3
+        },
+        {
+            info: "Epic Radio",
+            url: "http://158.69.225.238:6070/Live?stream.nsv&type=mp3",
+            genre: "K pop",
+            genreNumber: 16,
+            stationNumber: 4
+        },
+        {
+            info: "Third Wave Ska",
+            url: "http://206.190.136.141:2735/Live?stream.nsv&type=mp3",
+            genre: "SKA PUNK",
+            genreNumber: 16,
+            stationNumber: 5
+        }
+    ],
+
+    // Latin GENRE
+    [
+        {
+            info: "Cafe Romantico ",
+            url: "http://192.187.112.50:8190/stream?stream.nsv&type=mp3",
+            genre: "Latin",
+            genreNumber: 17,
+            stationNumber: 0
+        },
+        {
+            info: "XTREMO Stereo",
+            url: "http://94.23.6.53:8053/stream?stream.nsv&type=mp3",
+            genre: "Latin",
+            genreNumber: 17,
+            stationNumber: 1
+        },
+        {
+            info: "Tropicalisima Bachata",
+            url: "http://50.7.56.2:8024/;?stream.nsv&type=mp3",
+            genre: "Latin",
+            genreNumber: 17,
+            stationNumber: 2
+        },
+        {
+            info: "Radio HUANCAYO Peru",
+            url: "http://212.83.146.67:7208/stream?stream.nsv&type=mp3",
+            genre: "Latin",
+            genreNumber: 17,
+            stationNumber: 3
+        },
+        {
+            info: "Reggaeton Hits AAC",
+            url: "http://216.230.231.122:8000/32AAC?stream.nsv&type=mp3",
+            genre: "Latin",
+            genreNumber: 17,
+            stationNumber: 4
+        },
+        {
+            info: "Tropical 100 Bolero",
+            url: "http://108.54.234.102:8024/;?stream.nsv&type=mp3",
+            genre: "Latin",
+            genreNumber: 17,
+            stationNumber: 5
+        }
+    ],
+
+    // Classical Symphony GENRE
+    [
+        {
+            info: "Radio Classic Mozart ",
+            url: "http://37.251.146.169:8300/stream?stream.nsv&type=mp3",
+            genre: "Classical Symphony",
+            genreNumber: 18,
+            stationNumber: 0
+        },
+        {
+            info: "SignPilot LLC",
+            url: "http://198.143.144.226:8037/stream?stream.nsv&type=mp3",
+            genre: "Classical Symphony",
+            genreNumber: 18,
+            stationNumber: 1
+        },
+        {
+            info: "Radio Classic Romania",
+            url: "http://37.251.146.169:8000/stream?stream.nsv&type=mp3",
+            genre: "Classical Symphony",
+            genreNumber: 18,
+            stationNumber: 2
+        },
+        {
+            info: "Radio Classic Beethoven",
+            url: "http://37.251.146.169:7200/stream2?stream.nsv&type=mp3",
+            genre: "Classical Symphony",
+            genreNumber: 18,
+            stationNumber: 3
+        },
+        {
+            info: "Wayyradio Piano Classical",
+            url: "http://37.59.42.207:8367/stream?stream.nsv&type=mp3",
+            genre: "Classical",
+            genreNumber: 19,
+            stationNumber: 0
+        },
+        {
+            info: "Radio Music101 Piano",
+            url: "http://37.59.42.207:8559/stream2?stream.nsv&type=mp3",
+            genre: "Classical",
+            genreNumber: 19,
+            stationNumber: 1
+        }
+    ],
+
+    // Reggae GENRE
+    [
+        {
+            info: "Lommok Radio",
+            url: "http://37.59.47.192:8696/stream?stream.nsv&type=mp3",
+            genre: "Reggae",
+            genreNumber: 19,
+            stationNumber: 0
+        },
+        {
+            info: "Radio Feverpitch",
+            url: "http://82.94.166.107:8097/stream?stream.nsv&type=mp3",
+            genre: "Reggae",
+            genreNumber: 19,
+            stationNumber: 1
+        },
+        {
+            info: "CCMLF Radio",
+            url: "http://69.197.169.178:27488/;?stream.nsv&type=mp3",
+            genre: "Reggae",
+            genreNumber: 19,
+            stationNumber: 2
+        },
+        {
+            info: "DFW Caribbean Radio",
+            url: "http://69.197.169.178:30202/;?stream.nsv&type=mp3",
+            genre: "Reggae",
+            genreNumber: 19,
+            stationNumber: 3
+        },
+        {
+            info: "NLR Roots Radio",
+            url: "http://91.121.205.70:4062/;?stream.nsv&type=mp3",
+            genre: "Reggae",
+            genreNumber: 19,
+            stationNumber: 4
+        },
+        {
+            info: "upyd692 radio",
+            url: "http://91.121.205.70:4062/;?stream.nsv&type=mp3",
+            genre: "Reggae",
+            genreNumber: 19,
+            stationNumber: 5
+        }
     ]
 
 
 
-    //EMPTY GENRE
-    //[
-    //    {
-    //        info: "",
-    //        url: "stream.nsv&type=mp3",
-    //        genre: "",
-    //        genreNumber: 99,
-    //        stationNumber: 0
-    //    },
-    //    {
-    //        info: "",
-    //        url: "stream.nsv&type=mp3",
-    //        genre: "",
-    //        genreNumber: 99,
-    //        stationNumber: 1
-    //    },
-    //    {
-    //        info: "",
-    //        url: "stream.nsv&type=mp3",
-    //        genre: "",
-    //        genreNumber: 99,
-    //        stationNumber: 2
-    //    },
-    //    {
-    //        info: "",
-    //        url: "stream.nsv&type=mp3",
-    //        genre: "",
-    //        genreNumber: 99,
-    //        stationNumber: 3
-    //    },
-    //    {
-    //        info: "",
-    //        url: "stream.nsv&type=mp3",
-    //        genre: "",
-    //        genreNumber: 99,
-    //        stationNumber: 4
-    //    },
-    //    {
-    //        info: "",
-    //        url: "stream.nsv&type=mp3",
-    //        genre: "",
-    //        genreNumber: 99,
-    //        stationNumber: 5
-    //    }
-    //]
 
-
-
+//End of musicarray
 ];
 
 

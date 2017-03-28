@@ -194,11 +194,13 @@ h3 {
     font-size: 1.5em;
     padding-top: 10px;
 }
-/*#step-forward{*/
-    /*width: 40vw;*/
-    /*height: 50px;*/
-/*}*/
-/*#random{*/
-    /*width: 40vw;*/
-    /*height: 50px;*/
+/*@media screen and (min-width: 1199px) {*/
+    /*.container {*/
+        /*padding-left: 20vw;*/
+        /*padding-right: 20vw;*/
+    /*}*/
+    /*.player-buttons-flex button{*/
+        /*width: 20vw;*/
+    /*}*/
+
 /*}*/
