@@ -1,7 +1,7 @@
+//  RoboRadio JavaScript Streaming Player by MSR Interactive 
+
 var $animation = document.getElementById("animation");
 var $animWrapper = document.getElementById("anim-wrapper");
-
-
 
 var musicarray = [
 
@@ -1072,13 +1072,3 @@ $("#6").click(function(){
     setStation(musicarray[player.genreNumber][5]);
     playMusic();
 });
-
-
-
-//jQuery ready function
-
-//$(document).ready(function(){
-//
-//
-//});
-
