@@ -1,2 +1,8 @@
-A work in progress. 
-This is an HTML jQuery Audio player... Well it will be soon. 
+A JavaScript Streaming Music Player by MSR Interactive. 
+
+View the live demo at:
+https://msrinteractive.github.io/roboradio/
+
+Branch Requests Welcome!
+
+Streams over 100 AWESOME stations! 
