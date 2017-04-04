@@ -3,6 +3,7 @@
 var $animation = document.getElementById("animation");
 var $animWrapper = document.getElementById("anim-wrapper");
 var $speaker = document.getElementsByClassName("speaker");
+var $pauseButton = document.getElementById("playPause");
 
 var musicarray = [
 
@@ -927,12 +928,10 @@ var musicarray = [
         }
     ]
 
-
-
-
 //End of musicarray
 ];
 
+// player functions
 
 var player = {
     station: musicarray[0][0],
@@ -961,6 +960,7 @@ function playMusic(){
     currentAudio.src = player.station.url;
     player.paused = false;
 
+    $($pauseButton).value="";
     $($animation).removeClass("stopped");
     $($animation).addClass("spinning");
     $($speaker).addClass("pulsing");
@@ -987,7 +987,7 @@ function setStation(newStation){
     document.getElementById("genre-text").innerHTML = newStation.genre;
 }
 
-$($animWrapper).click(function() {
+$($speaker).click(function() {
     setStation(player.station);
     startStopper();
 
