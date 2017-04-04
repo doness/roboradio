@@ -308,7 +308,7 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "Digital Impulse Ambient Fantasy",
+            info: "DI Ambient Fantasy",
             url: "http://5.39.71.159:8193/stream?stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
