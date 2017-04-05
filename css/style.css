@@ -290,7 +290,9 @@ canvas {
     display: none;
     margin-right: auto;
     margin-left: 20px;
-
+}
+.genre-triggers:hover{
+    cursor: pointer;
 }
 
 

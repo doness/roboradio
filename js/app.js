@@ -413,7 +413,7 @@ var musicarray = [
             stationNumber: 4
         },
         {
-            info: "88.9 WQSU-FM The Pulse",
+            info: "88.9 WQSU-FM",
             url: "http://198.105.214.140:9045/Live?stream.nsv&type=mp3",
             genre: "College",
             genreNumber: 8,
@@ -1072,7 +1072,7 @@ $("#6").click(function(){
     playMusic();
 });
 
-// GENRE LIST SHOW AND HIDE
+// DYNAMIC GENRE LIST
 // ------------------------------
 
 function showPlayer(){
@@ -1094,7 +1094,7 @@ $("#genre-list-trigger").click(function(){
     $("#genre-list").show();
 });
 
-//dynamically create the genre list from the music array
+//  create the genre list from the music array
 
 for (i=0; i < musicarray.length; i++) {
     var text = ('<h3 class="genre-triggers" data-genre="' + i + '">' +  musicarray[i][0].genre + "</h3>");
