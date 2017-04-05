@@ -1,13 +1,12 @@
 //  RoboRadio JavaScript Streaming Player by MSR Interactive
 
 var $animation = document.getElementById("animation");
-var $animWrapper = document.getElementById("anim-wrapper");
 var $speaker = document.getElementsByClassName("speaker");
 var $pauseButton = document.getElementById("playPause");
 
 var musicarray = [
 
-    //POP GENREanimat
+    //POP GENRE
     [
         {
             info: "QMR Sugar Radio",
@@ -949,7 +948,7 @@ var genres = [
 
 function pause(){
     currentAudio.pause();
-        $($animation).removeClass("spinning");
+
         $($speaker).removeClass("pulsing");
         $($animation).addClass("stopped");
         player.paused = true;
@@ -959,10 +958,9 @@ function playMusic(){
 
     currentAudio.src = player.station.url;
     player.paused = false;
-
     $($pauseButton).value="";
     $($animation).removeClass("stopped");
-    $($animation).addClass("spinning");
+
     $($speaker).addClass("pulsing");
     currentAudio.play();
 }
@@ -1073,6 +1071,51 @@ $("#6").click(function(){
     setStation(musicarray[player.genreNumber][5]);
     playMusic();
 });
+
+// GENRE LIST SHOW AND HIDE
+// ------------------------------
+
+function showPlayer(){
+    $("#genre-list").hide();
+    $("section").show();
+}
+
+$("#robot").click(function(){
+    showPlayer();
+});
+
+// hide the genre list initially so it doesn't appear until clicking the trigger
+$("genre-list").hide();
+
+//triggers the function that shows the genre list
+
+$("#genre-list-trigger").click(function(){
+    $("section").hide();
+    $("#genre-list").show();
+});
+
+//dynamically create the genre list from the music array
+
+for (i=0; i < musicarray.length; i++) {
+    var text = ('<h3 class="genre-triggers" data-genre="' + i + '">' +  musicarray[i][0].genre + "</h3>");
+
+    $("#genres").append(text);
+}
+
+//  Here's the Magic
+
+$(".genre-triggers").click(function(e){
+    var newGenre = this.getAttribute("data-genre");
+    console.log("Genre Changed to " + musicarray[newGenre][0].genre);
+    setStation(musicarray[newGenre][0]);
+    showPlayer();
+    playMusic();
+});
+
+
+
+
+
 
 //lightning Courtesy of Akimitsu Hamamuro  MIT license @ codepen   http://codepen.io/akm2/pen/LuDba
 
@@ -1816,6 +1859,11 @@ Point.prototype = {
     };
     loop();
 })();
+
+//id3 Tagging
+
+
+
 
 
 
