@@ -48,8 +48,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!--<li><a href="index.html"> Home</a></li>-->
-                <li id="genre-list-trigger"><a href="#">Genres</a></li>
-                <!--<li><a href="#portfolio">Portfolio</a></li>-->
+                <li id="genre-list-trigger"><a>Genres</a></li>
+                <li id="about-trigger"><a>About</a></li>
                 <!--<li><a href="#">Blog</a></li>-->
                 <!--<li><a href="contact.php">Contact</a></li>-->
             </ul>
@@ -97,16 +97,11 @@
             </div>
 
             <div class="player-buttons-flex">
-
-
                 <button class="genre-next" id="genre-next"><i class="glyphicon glyphicon-folder-open"></i> </button>
                 <button id="step-forward"><i class="glyphicon glyphicon-step-forward"></i></button>
                 <button id="random"> <i class="fa fa-random"></i> </button>
                 <button id="playPause"><i class="glyphicon glyphicon-play"></i><i class="glyphicon glyphicon-pause"></i></button>
-
-
             </div>
-
 
         </div><!-- col -->
 
@@ -115,20 +110,17 @@
             <canvas id="c"></canvas>
         </div>
 
-
-
-
         </div>
 
 
     </div><!--row -->
 
-
-
 </div>
 </section>
+
+<!--This is hidden until activated -->
 <div id="genre-list">
-    <h1 id="close-genre">
+    <h1 class="close-button">
     <i class="fa fa-window-close-o"></i>
     </h1>
     <h1>Genres</h1>
@@ -137,7 +129,23 @@
 
     </div>
 </div>
+<!--this is hidden until activated -->
+<div id="about">
+    <h1 class="close-button">
+        <i class="fa fa-window-close-o"></i>
+    </h1>
+    <h1>About This App</h1>
+    <h4>RoboRadio was created by <a href="http://msrinteractive.com" target="_blank">Mike Riccardi </a> </h4>
+    <br/>
+    <p>
+        RoboRadio (working title) was created with chronic music-shufflers in mind.
+        Our mission is to focus on quality rather than quantity to deliver the best music streams and variety that the world has to offer.
+    </p>
+    <br/>
+    <h4>Special Thanks to <a href="http://codepen.io/akm2/" target="_blank">Akimitsu Hamamuro</a> for the lightning visuals (MIT License)</h4>
+    <h6><a href="MIT-license.txt" target="_blank">MIT License</a></h6>
 
+</div>
 
 </body>
 <script src="js/simplex-noise.js"></script>

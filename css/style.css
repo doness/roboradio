@@ -12,6 +12,12 @@ body {
 h3 {
     text-shadow: 1px 2px 2px #212121;
 }
+a, a:visited {
+    color: #03A9F4;
+}
+a:hover, a:active{
+    color: #212121;
+}
 
 .app {
     border: 10px solid #212121;
@@ -288,9 +294,10 @@ canvas {
 .canvas-div {
     align-content: center;
 }
-#genre-list-trigger{
+.navbar-nav{
     position: relative;
     left: 10px;
+    cursor: pointer;
 }
 #genre-list {
     display: none;
@@ -303,7 +310,12 @@ canvas {
 .genre-triggers:hover {
     cursor: pointer;
 }
-#close-genre {
+#about{
+    display: none;
+    margin-right: auto;
+    margin-left: 20px;
+}
+.close-button {
     position: absolute;
     right: 10px;
     top: 94px;
@@ -311,9 +323,10 @@ canvas {
     font-size: 48px;
     z-index: 10;
     padding-right: 10px;
+    cursor: pointer;
 }
 @media screen and (min-width: 481px){
-    #close-genre{
+    .close-button{
         top: 64px;
     }
     #genre-list h3{
@@ -322,4 +335,6 @@ canvas {
     }
 }
 
-
+#about h1{
+    display: inline;
+}

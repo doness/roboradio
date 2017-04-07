@@ -1072,31 +1072,69 @@ $("#6").click(function(){
     playMusic();
 });
 
-// DYNAMIC GENRE LIST
+// DYNAMIC VIEWS
 // ------------------------------
 
-function showPlayer(){
+// hide the other views initially so they don't appear until called
+$("#genre-list").hide();
+$("#about").hide();
+
+//views
+
+function showPlayer() {
     $("#genre-list").hide();
+    $("#about").hide();
     $("section").show();
 }
+function showGenre(){
+    $("section").hide();
+    $("#about").hide();
+    $("#genre-list").show();
+}
+function showAbout(){
+    $("section").hide();
+    $("#genre-list").hide();
+    $("#about").show();
+}
+
+
+function genreToggle(){
+    if ($("#genre-list").is(":visible")){
+        $("#genre-list").hide();
+        showPlayer();
+    } else {
+        showGenre();
+    }
+}
+
+function aboutToggle(){
+    if ($("#about").is(":visible")){
+        $("#about").hide();
+        showPlayer();
+    } else {
+        showAbout();
+    }
+}
+
+//navigation for views
+
+$("#genre-list-trigger").click(function(){
+   genreToggle();
+});
+
+$("#about-trigger").click(function(){
+    aboutToggle();
+});
 
 $("#robot").click(function(){
     showPlayer();
 });
 
-$("#close-genre").click(function(){
+$(".close-button").click(function(){
     showPlayer();
 });
 
-// hide the genre list initially so it doesn't appear until clicking the trigger
-$("genre-list").hide();
 
-//triggers the function that shows the genre list
-
-$("#genre-list-trigger").click(function(){
-    $("section").toggle();
-    $("#genre-list").toggle();
-});
 
 //  create the genre list from the music array
 
