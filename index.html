@@ -6,20 +6,19 @@
     Todo:
 
     MAKE A FAVICON  - use the robot guy
-
-    genres - display all genres in pull down list
     about - shows info about app, and contact info
-    add a slider for the genre selection
-    Remove radio spinning animation move the speakers to the bottom right and left - set these to play/pause and remove the play/pause button
 
     change random button to a lightbulb maybe change the genre button to a folder
-    Add ID3 reading capability
+    Add ID3 reading capability   if possible
     https://ericbidelman.tumblr.com/post/8343485440/reading-mp3-id3-tags-in-javascript
 
+    add a station list that loads dynamically like the genres do
 
     Get cookie-saving working
-    add theme switching/stylesheets
-    add favorite stations - (put these buttons along the top of the display? )
+    add theme switching/stylesheets   - update the href on a link element to override the original css with new sheets
+
+
+    add favorite stations - make this a list - make it save to a cookie or local storage
 
     -->
     <meta charset="UTF-8">
@@ -28,6 +27,7 @@
     <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link href="css/animate.css-master/animate.css" type="text/css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -101,7 +101,7 @@
 
                 <button class="genre-next" id="genre-next"><i class="glyphicon glyphicon-folder-open"></i> </button>
                 <button id="step-forward"><i class="glyphicon glyphicon-step-forward"></i></button>
-                <button id="random"> <i class="glyphicon glyphicon-music"></i> </button>
+                <button id="random"> <i class="fa fa-random"></i> </button>
                 <button id="playPause"><i class="glyphicon glyphicon-play"></i><i class="glyphicon glyphicon-pause"></i></button>
 
 
@@ -128,7 +128,11 @@
 </div>
 </section>
 <div id="genre-list">
+    <h1 id="close-genre">
+    <i class="fa fa-window-close-o"></i>
+    </h1>
     <h1>Genres</h1>
+
     <div id="genres">
 
     </div>

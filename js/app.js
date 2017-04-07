@@ -1084,14 +1084,18 @@ $("#robot").click(function(){
     showPlayer();
 });
 
+$("#close-genre").click(function(){
+    showPlayer();
+});
+
 // hide the genre list initially so it doesn't appear until clicking the trigger
 $("genre-list").hide();
 
 //triggers the function that shows the genre list
 
 $("#genre-list-trigger").click(function(){
-    $("section").hide();
-    $("#genre-list").show();
+    $("section").toggle();
+    $("#genre-list").toggle();
 });
 
 //  create the genre list from the music array
