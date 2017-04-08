@@ -280,12 +280,14 @@ canvas {
 #left-speaker{
     position: absolute;
     left: 10px;
-    max-width: 220px;
+    max-width: 230px;
+    max-height: 230px
 }
 #right-speaker{
     position: absolute;
     right: 10px;
-    max-width: 220px;
+    max-width: 230px;
+    max-height:230px;
 }
 #song-text{
     position: relative;
