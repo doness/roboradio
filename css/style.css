@@ -22,13 +22,13 @@ a:hover, a:active{
 .app {
     border: 10px solid #212121;
     border-radius: 10px;
-    background-color: #777777;
-    background: #7d7e7d;
-    background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
-    background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%);
-    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
+    background-color: #BBDEFB;
+    background: #BBDEFB;
 }
+.navbar-nav {
+    display: inline-flex;
+}
+
 
 #anim-wrapper {
     text-align: center;
@@ -194,7 +194,7 @@ background-color: #03A9F4;
     max-width: 480px;
     margin-right: auto;
     margin-left: auto;
-    height: 7em;
+    height: 5em;
 
 }
 #station-text{
@@ -204,7 +204,7 @@ background-color: #03A9F4;
     
 }
 #genre-text{
-    font-size: 1.25em;
+    font-size: 1.75em;
     position: relative;
     bottom: 25px;
 }
@@ -352,4 +352,22 @@ canvas {
 }
 #default-blue-theme {
     background-color: #03A9F4;
+}
+#pink-theme {
+    background-color: #E91E63;
+}
+#orange-theme {
+    background-color: #FF5722;
+}
+#purple-theme {
+    background-color: #9C27B0;
+}
+#grey-theme {
+    background-color: #9E9E9E;
+}
+#brown-theme {
+    background-color: #795548;
+}
+#yellow-theme {
+    background-color: #FDD835;
 }

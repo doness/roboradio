@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
     <!--
     Todo:
 
@@ -10,13 +9,13 @@
 
     add a station list that loads dynamically like the genres do
 
-    add more color themes
-    add style for button styles
-    add style for background colors
+    add more  themes
+
+
 
     Get cookie-saving working
 
-    add favorite stations - make this a list - make it save to a cookie or local storage - name it favs
+    add favorite stations - make this a list - make it save to a cookie or local storage
 
 
 
@@ -122,7 +121,9 @@
 </div>
 </section>
 
-<!--This is hidden until activated -->
+
+<!--Additional Views are below this point these are hidden until jQuery show is called -->
+
 <div id="genre-list">
     <h1 class="close-button">
 
@@ -133,7 +134,9 @@
 
     </div>
 </div>
-<!--this is hidden until activated -->
+
+
+
 <div id="about">
 
     <h1>About This App <i class="fa fa-window-close-o close-button"></i></h1>
@@ -155,11 +158,17 @@
 </div>
 
 <div id="colors">
-    <h1>Button Colors <i class="fa fa-window-close-o close-button"></i> </h1>
+    <h1> Color themes <i class="fa fa-window-close-o close-button"></i> </h1>
     <button id="default-blue-theme" class="btn colorswitch" data-color="default-blue">DEFAULT-BLUE</button>
     <button id="red-theme" class="btn colorswitch" data-color="red">RED</button>
     <button id="green-theme" class="btn colorswitch" data-color="green">GREEN</button>
-</div>
+    <button id="pink-theme" class="btn colorswitch" data-color="pink">PINK</button>
+    <button id="orange-theme" class="btn colorswitch" data-color="orange">ORANGE</button>
+    <button id="purple-theme" class="btn colorswitch" data-color="purple">PURPLE</button>
+    <button id="grey-theme" class="btn colorswitch" data-color="grey">GREY</button>
+    <button id="brown-theme" class="btn colorswitch" data-color="brown">BROWN</button>
+    <button id="yellow-theme" class="btn colorswitch" data-color="yellow">YELLOW</button>
+ </div>
 
 </body>
 <script src="js/simplex-noise.js"></script>

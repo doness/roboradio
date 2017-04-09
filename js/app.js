@@ -16,7 +16,7 @@ var musicarray = [
             stationNumber: 0
         },
         {
-            info: "The Mix Radio Extra",
+            info: "Mix Radio Extra",
             url: "http://51.255.127.128:8032/stream?icy=http",
             genre: "Pop",
             genreNumber: 0,
@@ -491,7 +491,7 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "DI Radio Digital Impulse",
+            info: "DI Radio Country",
             url: "http://5.39.71.159:8110/stream?stream.nsv&type=mp3",
             genre: "Classic Country",
             genreNumber: 10,
@@ -537,21 +537,21 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "Sonora Classic Rock \& Metal",
+            info: "Sonora Classic Metal",
             url: "http://46.105.122.141:6664/;?stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
             stationNumber: 3
         },
         {
-            info: "Digital Impulse Hard Rock",
+            info: "DI Hard Rock",
             url: "http://5.39.71.159:8165/stream?stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
             stationNumber: 4
         },
         {
-            info: "Hang10RockRadio",
+            info: "Hang 10 RockRadio",
             url: "http://158.69.227.214:8113/stream?stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
@@ -675,7 +675,7 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "CDNX Classic \& New Indie",
+            info: "CDNX Indie",
             url: "http://109.123.70.138:8136/stream?stream.nsv&type=mp3",
             genre: "Alternative",
             genreNumber: 14,
@@ -721,7 +721,7 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "Radio No Futur",
+            info: "Radio No Future",
             url: "http://37.187.124.134:8100/;?stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
@@ -753,7 +753,7 @@ var musicarray = [
             stationNumber: 0
         },
         {
-            info: "Aewen Radio",
+            info: "Aewen Kpop",
             url: "http://37.72.100.39:8001/stream?stream.nsv&type=mp3",
             genre: "K pop",
             genreNumber: 16,
@@ -774,7 +774,7 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "Epic Radio",
+            info: "Epic Kpop",
             url: "http://158.69.225.238:6070/Live?stream.nsv&type=mp3",
             genre: "K pop",
             genreNumber: 16,
