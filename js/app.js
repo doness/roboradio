@@ -946,19 +946,19 @@ var genres = [
 ];
 
 
-function pause(){
+function pause() {
     currentAudio.pause();
 
-        $($speaker).removeClass("pulsing");
-        $($animation).addClass("stopped");
-        player.paused = true;
+    $($speaker).removeClass("pulsing");
+    $($animation).addClass("stopped");
+    player.paused = true;
 }
 
-function playMusic(){
+function playMusic() {
 
     currentAudio.src = player.station.url;
     player.paused = false;
-    $($pauseButton).value="";
+    $($pauseButton).value = "";
     $($animation).removeClass("stopped");
 
     $($speaker).addClass("pulsing");
@@ -966,8 +966,8 @@ function playMusic(){
 }
 
 
-function startStopper(){
-    if(player.paused === false){
+function startStopper() {
+    if (player.paused === false) {
         pause();
     } else {
         playMusic();
@@ -975,9 +975,7 @@ function startStopper(){
 }
 
 
-function setStation(newStation){
-
-
+function setStation(newStation) {
     player.station = newStation;
     player.stationNumber = newStation.stationNumber;
     player.genreNumber = newStation.genreNumber;
@@ -985,21 +983,21 @@ function setStation(newStation){
     document.getElementById("genre-text").innerHTML = newStation.genre;
 }
 
-$($speaker).click(function() {
+$($speaker).click(function () {
     setStation(player.station);
     startStopper();
 
 });
 
-$("#playPause").click(function(){
+$("#playPause").click(function () {
     setStation(player.station);
     startStopper();
 });
 
-$("#step-forward").click(function(){
+$("#step-forward").click(function () {
 
-    if (player.stationNumber < musicarray[player.genreNumber].length -1) {
-        setStation(musicarray[player.genreNumber][(player.stationNumber +1)]);
+    if (player.stationNumber < musicarray[player.genreNumber].length - 1) {
+        setStation(musicarray[player.genreNumber][(player.stationNumber + 1)]);
         playMusic();
         console.log("Step-Forward " + player.station.info);
     }
@@ -1011,19 +1009,19 @@ $("#step-forward").click(function(){
 
 });
 
-$("#genre-next").click(function(){
-    if (player.genreNumber < musicarray.length -1){
-        setStation( musicarray[ (player.genreNumber + 1) ][0] );
+$("#genre-next").click(function () {
+    if (player.genreNumber < musicarray.length - 1) {
+        setStation(musicarray[(player.genreNumber + 1)][0]);
         playMusic();
         console.log("Change to Genre " + player.station.genre);
     } else {
-        setStation( musicarray[0][0] );
+        setStation(musicarray[0][0]);
         playMusic();
         console.log("Change to Genre " + player.station.genre);
     }
 });
 
-$("#random").click(function(){
+$("#random").click(function () {
     pickGenre = Math.floor(Math.random() * musicarray.length);
     pickSong = Math.floor(Math.random() * musicarray[pickGenre].length)
     setStation(musicarray[pickGenre][pickSong]);
@@ -1032,41 +1030,39 @@ $("#random").click(function(){
 });
 
 
-
-
-$("#1").click(function(){
+$("#1").click(function () {
 
     setStation(musicarray[player.genreNumber][0]);
     playMusic();
 });
 
 
-$("#2").click(function(){
+$("#2").click(function () {
 
     setStation(musicarray[player.genreNumber][1]);
     playMusic();
 });
 
 
-$("#3").click(function(){
+$("#3").click(function () {
 
     setStation(musicarray[player.genreNumber][2]);
     playMusic();
 });
 
-$("#4").click(function(){
+$("#4").click(function () {
 
     setStation(musicarray[player.genreNumber][3]);
     playMusic();
 });
 
-$("#5").click(function(){
+$("#5").click(function () {
 
     setStation(musicarray[player.genreNumber][4]);
     playMusic();
 });
 
-$("#6").click(function(){
+$("#6").click(function () {
 
     setStation(musicarray[player.genreNumber][5]);
     playMusic();
@@ -1075,11 +1071,11 @@ $("#6").click(function(){
 //  color switching
 
 
-$(".colorswitch").click(function(e){
+$(".colorswitch").click(function (e) {
     var newColor = this.getAttribute("data-color");
     var css = "css/" + newColor + ".css";
     $("#theme-switcher").attr("href", "css/" + newColor + ".css");
-    console.log("Colors changed to" + newColor );
+    console.log("Colors changed to" + newColor);
     showPlayer();
 });
 
@@ -1102,28 +1098,28 @@ function showPlayer() {
     $("#colors").hide();
     $("section").show();
 }
-function showGenre(){
+function showGenre() {
     $("section").hide();
     $("#stations-list").hide();
     $("#about").hide();
     $("#colors").hide();
     $("#genre-list").show();
 }
-function showAbout(){
+function showAbout() {
     $("section").hide();
     $("#stations-list").hide();
     $("#genre-list").hide();
     $("#colors").hide();
     $("#about").show();
 }
-function showColors(){
+function showColors() {
     $("section").hide();
     $("#stations-list").hide();
     $("#genre-list").hide();
     $("#about").hide();
     $("#colors").show();
 }
-function showStations(){
+function showStations() {
     $("section").hide();
     $("#genre-list").hide();
     $("#about").hide();
@@ -1132,8 +1128,8 @@ function showStations(){
 }
 
 
-function genreToggle(){
-    if ($("#genre-list").is(":visible")){
+function genreToggle() {
+    if ($("#genre-list").is(":visible")) {
         $("#genre-list").hide();
         showPlayer();
     } else {
@@ -1141,8 +1137,8 @@ function genreToggle(){
     }
 }
 
-function aboutToggle(){
-    if ($("#about").is(":visible")){
+function aboutToggle() {
+    if ($("#about").is(":visible")) {
         $("#about").hide();
         showPlayer();
     } else {
@@ -1150,16 +1146,16 @@ function aboutToggle(){
     }
 }
 
-function colorsToggle(){
-    if ($("#colors").is(":visible")){
+function colorsToggle() {
+    if ($("#colors").is(":visible")) {
         $("#colors").hide();
         showPlayer();
     } else {
         showColors();
     }
 }
-function stationsToggle(){
-    if ($("#stations-list").is(":visible")){
+function stationsToggle() {
+    if ($("#stations-list").is(":visible")) {
         $("#stations-list").hide();
         showPlayer();
     } else {
@@ -1169,42 +1165,41 @@ function stationsToggle(){
 
 //navigation for views
 
-$("#genre-list-trigger").click(function(){
-   genreToggle();
+$("#genre-list-trigger").click(function () {
+    genreToggle();
 });
 
-$("#stations-list-trigger").click(function(){
+$("#stations-list-trigger").click(function () {
     stationsToggle();
 });
 
-$("#about-trigger").click(function(){
+$("#about-trigger").click(function () {
     aboutToggle();
 });
 
-$("#robot").click(function(){
+$("#robot").click(function () {
     showPlayer();
 });
 
-$("#colors-trigger").click(function(){
+$("#colors-trigger").click(function () {
     colorsToggle();
 });
 
-$(".close-button").click(function(){
+$(".close-button").click(function () {
     showPlayer();
 });
 
 
 //  create the genre list from the music array
 
-for (i=0; i < musicarray.length; i++) {
-    var text = ('<h3 class="genre-triggers" data-genre="' + i + '">' +  musicarray[i][0].genre + "</h3>");
-
+for (i = 0; i < musicarray.length; i++) {
+    var text = ('<h3 class="genre-triggers" data-genre="' + i + '">' + musicarray[i][0].genre + "</h3>");
     $("#genres").append(text);
 }
 
 //  Here's the Magic
 
-$(".genre-triggers").click(function(e){
+$(".genre-triggers").click(function (e) {
     var newGenre = this.getAttribute("data-genre");
     console.log("Genre Changed to " + musicarray[newGenre][0].genre);
     setStation(musicarray[newGenre][0]);
@@ -1215,11 +1210,11 @@ $(".genre-triggers").click(function(e){
 // create the stations list from the music array
 
 
-for (i=0; i < musicarray.length; i++) {
-    for (j=0; j<6; j++) {
-
-        var text = ('<h3 class="station-triggers" data-genre="' + i + '" data-station="' + j + '"  >' +  musicarray[i][j].info + "</h3>");
-
+for (i = 0; i < musicarray.length; i++) {
+    var genreName = ('<h2 class="genre-names">' + musicarray[i][0].genre + '</h2>'  );
+    $("#stations").append(genreName);
+    for (j = 0; j < 6; j++) {
+        var text = ('<h3 class="station-triggers" data-genre="' + i + '" data-station="' + j + '"  >' + musicarray[i][j].info + "</h3>");
         $("#stations").append(text);
     }
 
@@ -1227,7 +1222,7 @@ for (i=0; i < musicarray.length; i++) {
 
 // a little more magic
 
-$(".station-triggers").click(function(e){
+$(".station-triggers").click(function (e) {
     var newGenre = this.getAttribute("data-genre");
     var newStation = this.getAttribute("data-station");
     console.log("Station Changed to " + musicarray[newGenre][newStation].info);
@@ -1243,47 +1238,49 @@ $(".station-triggers").click(function(e){
 /**
  * requestAnimationFrame
  */
-window.requestAnimationFrame = (function(){
-    return  window.requestAnimationFrame       ||
+window.requestAnimationFrame = (function () {
+    return window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame    ||
-        window.oRequestAnimationFrame      ||
-        window.msRequestAnimationFrame     ||
-        function (callback) { window.setTimeout(callback, 1000 / 60); };
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
 })();
 
 
 /**
  * Lightning
  */
-var Lightning = (function(window) {
+var Lightning = (function (window) {
 
     /**
      * LightningAbstract
      */
     var LightningAbstract = {
-        points:      null,
-        children:    null,
+        points: null,
+        children: null,
         _simplexNoise: new SimplexNoise(),
 
-        render: function(ctx, controls) {
+        render: function (ctx, controls) {
             this._update(controls);
             this._draw(ctx);
         },
 
-        _update: function(controls) {
+        _update: function (controls) {
             throw new Error('Not override');
         },
 
-        _draw: function(ctx) {
-            var points  = this.points,
-                isRoot  = false, opts,
+        _draw: function (ctx) {
+            var points = this.points,
+                isRoot = false, opts,
                 p, p1, dx, dy, dist,
                 lineWidth,
                 i, len;
 
             isRoot = !this.parent;
-            opts   = isRoot ? this : this.parent;
+            opts = isRoot ? this : this.parent;
 
             if (isRoot) { // is root
                 var radius, gradient,
@@ -1345,7 +1342,7 @@ var Lightning = (function(window) {
             ctx.restore();
         },
 
-        _noise2d: function(x, y) {
+        _noise2d: function (x, y) {
             var octaves = 3,
                 fallout = 0.5,
                 amp = 1, f = 1, sum = 0,
@@ -1360,7 +1357,7 @@ var Lightning = (function(window) {
             return sum;
         },
 
-        _filterApply: function(points, lineLength, segmentsNum, base, amp, offset) {
+        _filterApply: function (points, lineLength, segmentsNum, base, amp, offset) {
             var pointsOld = this.points,
             // spline
                 spline = [],
@@ -1407,9 +1404,9 @@ var Lightning = (function(window) {
             // Noise
 
             points = [];
-            len    = spline.length;
-            per    = 1 / (len - 1);
-            base   = 1 / base;
+            len = spline.length;
+            per = 1 / (len - 1);
+            base = 1 / base;
 
             for (i = 0, len = spline.length; i < len; i++) {
                 p = spline[i];
@@ -1439,7 +1436,7 @@ var Lightning = (function(window) {
                     p.x = px;
                     p.y = py;
                 } else {
-                    p = { x: px, y: py };
+                    p = {x: px, y: py};
                 }
 
                 points.push(p);
@@ -1476,14 +1473,14 @@ var Lightning = (function(window) {
             return shortest;
         },
 
-        _catmullRom: function(p0, p1, p2, p3, t) {
+        _catmullRom: function (p0, p1, p2, p3, t) {
             var v0 = (p2 - p0) * 0.5,
                 v1 = (p3 - p1) * 0.5;
             return (2 * p1 - 2 * p2 + v0 + v1) * t * t * t +
                 (-3 * p1 + 3 * p2 - 2 * v0 - v1) * t * t + v0 * t + p1;
         },
 
-        _colorToString: function(alpha) {
+        _colorToString: function (alpha) {
             var c = this.color;
             return this.colorType === 'rgb' ?
             'rgba(' + c.join(',') + ',' + alpha + ')' :
@@ -1496,45 +1493,45 @@ var Lightning = (function(window) {
      * @constructor
      */
     function Lightning(segmentsNum) {
-        this.points   = [];
+        this.points = [];
         this.children = [];
 
-        this._params  = [];
+        this._params = [];
         this._offsets = [];
     }
 
     Lightning.prototype = extend(LightningAbstract, {
-        color:        [255, 255, 255],
-        colorType:    'rgb',
-        blur:         50,
-        maxAlpha:     1,
-        minAlpha:     0.75,
+        color: [255, 255, 255],
+        colorType: 'rgb',
+        blur: 50,
+        maxAlpha: 1,
+        minAlpha: 0.75,
         maxLineWidth: 5,
         minLineWidth: 0.5,
-        _params:      null,
-        _offsets:     null,
+        _params: null,
+        _offsets: null,
 
-        addParam: function(segmentsNum, base, amplitude, speed) {
+        addParam: function (segmentsNum, base, amplitude, speed) {
             this._params.push({
                 segmentsNum: segmentsNum,
-                base:        base,
-                amplitude:   amplitude,
-                speed:       speed
+                base: base,
+                amplitude: amplitude,
+                speed: speed
             });
             this._offsets[this._params.length - 1] = 0;
         },
 
-        createChild: function(base, amplitude, speed) {
+        createChild: function (base, amplitude, speed) {
             var child = new LChild(this, {
-                base:        base      || this._params.base,
-                amplitude:   amplitude || this._params.amplitude,
-                speed:       speed     || this._params.speed
+                base: base || this._params.base,
+                amplitude: amplitude || this._params.amplitude,
+                speed: speed || this._params.speed
             });
             this.children.push(child);
             return child;
         },
 
-        _update: function(points) {
+        _update: function (points) {
             var params = this._params, param,
                 offsets = this._offsets,
                 lineLength,
@@ -1572,23 +1569,23 @@ var Lightning = (function(window) {
     function LChild(parent, param) {
         this.parent = parent;
 
-        this.points   = [];
+        this.points = [];
         this._param = param;
     }
 
     LChild.prototype = extend(LightningAbstract, {
-        parent:     null,
+        parent: null,
         _startStep: 0,
-        _endStep:   0,
-        _separate:  2,
-        _param:     null,
-        _offset:    0,
+        _endStep: 0,
+        _separate: 2,
+        _param: null,
+        _offset: 0,
         _lastChangeTime: 0,
 
-        _update: function() {
+        _update: function () {
             var parent = this.parent,
-                plen   = this.parent.points.length,
-                param  = this._param,
+                plen = this.parent.points.length,
+                param = this._param,
                 points = [],
                 currentTime,
                 range, rangeLen, sep, seg,
@@ -1601,14 +1598,14 @@ var Lightning = (function(window) {
                 currentTime - this._lastChangeTime > 10000 * Math.random() ||
                 plen < this._endStep
             ) {
-                var stepMin   = plen * 0.1 | 0,
+                var stepMin = plen * 0.1 | 0,
                     startStep = this._startStep = (Math.random() * (plen / 3 * 2 | 0) | 0);
                 this._endStep = startStep + stepMin + ((Math.random() * (plen - startStep - stepMin) + 1) | 0);
                 this._lastChangeTime = currentTime;
             }
 
             // 親のポイント配列から取得範囲を切り出す
-            range    = parent.points.slice(this._startStep, this._endStep);
+            range = parent.points.slice(this._startStep, this._endStep);
             rangeLen = range.length;
 
             // 範囲からスプライン曲線の制御点を取得する
@@ -1630,7 +1627,7 @@ var Lightning = (function(window) {
             this.points = this._filterApply(points, lineLength, rangeLen * 0.5 | 0, param.base, param.amplitude, this._offset);
         },
 
-        _colorToString: function(alpha) {
+        _colorToString: function (alpha) {
             var c = this.parent.color;
             return this.parent.colorType === 'rgb' ?
             'rgba(' + c.join(',') + ',' + alpha + ')' :
@@ -1665,47 +1662,47 @@ function Point(x, y, color, colorType) {
     this.colorType = colorType;
     this.vx = Math.random() * (3 + 3) - 3;
     this.vy = Math.random() * (3 + 3) - 3;
-    this._latest = { x: this.x, y: this.y };
+    this._latest = {x: this.x, y: this.y};
 }
 
 Point._field = null;
 
-Point.setField = function(x, y, width, height) {
+Point.setField = function (x, y, width, height) {
     Point._field = {
-        x:      x,
-        y:      y,
-        width:  width,
+        x: x,
+        y: y,
+        width: width,
         height: height,
-        right:  x + width,
+        right: x + width,
         bottom: y + height
     };
 };
 
 Point.prototype = {
-    color:          null,
-    colorType:      'rgb',
-    radius:         50,
-    alpha:          0.2,
-    dragging:       false,
-    dying:          false,
-    dead:           false,
-    _mouse:         null,
-    _latest:        null,
-    _mouseDist:     null,
-    _currentAlpha:  0,
+    color: null,
+    colorType: 'rgb',
+    radius: 50,
+    alpha: 0.2,
+    dragging: false,
+    dying: false,
+    dead: false,
+    _mouse: null,
+    _latest: null,
+    _mouseDist: null,
+    _currentAlpha: 0,
     _currentRadius: 0,
 
-    lengthSq: function() {
+    lengthSq: function () {
         return this.x * this.x + this.y * this.y;
     },
 
-    hitTest: function(mouse) {
+    hitTest: function (mouse) {
         var dx = mouse.x - this.x,
             dy = mouse.y - this.y;
         return dx * dx + dy * dy < this.radius * this.radius;
     },
 
-    dragStart: function(mouse) {
+    dragStart: function (mouse) {
         if (this.hitTest(mouse)) {
             this._mouse = mouse;
             this._mouseDist = {
@@ -1717,17 +1714,17 @@ Point.prototype = {
         return this.dragging;
     },
 
-    dragEnd: function() {
+    dragEnd: function () {
         this.dragging = false;
         this._mouse = this._mouseDist = null;
     },
 
-    kill: function() {
+    kill: function () {
         this.dying = true;
         this.radius = 0;
     },
 
-    update: function(mouse) {
+    update: function (mouse) {
         var field = Point._field,
             radius = this.radius,
             vlen, d;
@@ -1781,7 +1778,7 @@ Point.prototype = {
         this._currentRadius *= Math.random() * (1 - 0.85) + 0.85;
     },
 
-    draw: function(ctx) {
+    draw: function (ctx) {
         var radius = this._currentRadius;
         var gradient = ctx.createRadialGradient(this.x, this.y, radius / 3, this.x, this.y, radius);
         gradient.addColorStop(0, this._colorToString(this._currentAlpha));
@@ -1793,7 +1790,7 @@ Point.prototype = {
         ctx.fill();
     },
 
-    _colorToString: function(alpha) {
+    _colorToString: function (alpha) {
         var c = this.color;
         return this.colorType === 'rgb' ?
         'rgba(' + c.join(',') + ',' + alpha + ')' :
@@ -1802,9 +1799,7 @@ Point.prototype = {
 };
 
 
-
-
-(function() {
+(function () {
 
     // Configs
 
@@ -1820,7 +1815,7 @@ Point.prototype = {
     var canvas, context,
         canvasMinSize, centerX, centerY,
         points = [],
-        mouse = { x: 0, y: 0 },
+        mouse = {x: 0, y: 0},
         lightning,
         grad,
         i;
@@ -1830,13 +1825,13 @@ Point.prototype = {
 
     function resize(e) {
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight /3;
+        canvas.height = window.innerHeight / 3;
         context = canvas.getContext('2d');
         context.lineCap = 'round';
 
         canvasMinSize = Math.min(canvas.width, canvas.height);
-        centerX       = canvas.width * 0.5;
-        centerY       = canvas.height * 0.5;
+        centerX = canvas.width * 0.5;
+        centerY = canvas.height * 0.5;
 
         grad = context.createLinearGradient(0, 0, 0, canvas.height);
         grad.addColorStop(0, 'hsla(195, 100%, 50%, 0.08)');
@@ -1926,7 +1921,7 @@ Point.prototype = {
     }
 
     lightning = new Lightning();
-    lightning.addParam(8,  10, 0.7, 0.01); // segumentsNum, noiseBase, amplitude, speed
+    lightning.addParam(8, 10, 0.7, 0.01); // segumentsNum, noiseBase, amplitude, speed
     lightning.addParam(16, 60, 0.5, 0.03);
     lightning.colorType = 'hsl';
     lightning.color = LIHTNING_COLOR.slice();
@@ -1942,7 +1937,7 @@ Point.prototype = {
 
     // Start update
 
-    var loop = function() {
+    var loop = function () {
         var controls = [],
             i, len, p;
 
