@@ -25,7 +25,7 @@ a:hover, a:active{
     background-color: #BBDEFB;
     background: #BBDEFB;
 }
-.navbar-nav {
+.navbar-nav li{
     display: inline-flex;
 }
 

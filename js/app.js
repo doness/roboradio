@@ -1175,7 +1175,6 @@ $("#genre-list-trigger").click(function(){
 
 $("#stations-list-trigger").click(function(){
     stationsToggle();
-    console.log("PRESSED");
 });
 
 $("#about-trigger").click(function(){
