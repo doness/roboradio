@@ -1091,32 +1091,44 @@ $(".colorswitch").click(function(e){
 $("#genre-list").hide();
 $("#about").hide();
 $("#colors").hide();
+$("#stations-list").hide();
 
 //views
 
 function showPlayer() {
     $("#genre-list").hide();
+    $("#stations-list").hide();
     $("#about").hide();
     $("#colors").hide();
     $("section").show();
 }
 function showGenre(){
     $("section").hide();
+    $("#stations-list").hide();
     $("#about").hide();
     $("#colors").hide();
     $("#genre-list").show();
 }
 function showAbout(){
     $("section").hide();
+    $("#stations-list").hide();
     $("#genre-list").hide();
     $("#colors").hide();
     $("#about").show();
 }
 function showColors(){
     $("section").hide();
+    $("#stations-list").hide();
     $("#genre-list").hide();
     $("#about").hide();
     $("#colors").show();
+}
+function showStations(){
+    $("section").hide();
+    $("#genre-list").hide();
+    $("#about").hide();
+    $("#colors").hide();
+    $("#stations-list").show();
 }
 
 
@@ -1146,12 +1158,24 @@ function colorsToggle(){
         showColors();
     }
 }
-
+function stationsToggle(){
+    if ($("#stations-list").is(":visible")){
+        $("#stations-list").hide();
+        showPlayer();
+    } else {
+        showStations();
+    }
+}
 
 //navigation for views
 
 $("#genre-list-trigger").click(function(){
    genreToggle();
+});
+
+$("#stations-list-trigger").click(function(){
+    stationsToggle();
+    console.log("PRESSED");
 });
 
 $("#about-trigger").click(function(){
@@ -1185,6 +1209,30 @@ $(".genre-triggers").click(function(e){
     var newGenre = this.getAttribute("data-genre");
     console.log("Genre Changed to " + musicarray[newGenre][0].genre);
     setStation(musicarray[newGenre][0]);
+    showPlayer();
+    playMusic();
+});
+
+// create the stations list from the music array
+
+
+for (i=0; i < musicarray.length; i++) {
+    for (j=0; j<6; j++) {
+
+        var text = ('<h3 class="station-triggers" data-genre="' + i + '" data-station="' + j + '"  >' +  musicarray[i][j].info + "</h3>");
+
+        $("#stations").append(text);
+    }
+
+}
+
+// a little more magic
+
+$(".station-triggers").click(function(e){
+    var newGenre = this.getAttribute("data-genre");
+    var newStation = this.getAttribute("data-station");
+    console.log("Station Changed to " + musicarray[newGenre][newStation].info);
+    setStation(musicarray[newGenre][newStation]);
     showPlayer();
     playMusic();
 });

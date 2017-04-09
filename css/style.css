@@ -29,7 +29,6 @@ a:hover, a:active{
     display: inline-flex;
 }
 
-
 #anim-wrapper {
     text-align: center;
     background-color: #37474F;
@@ -309,8 +308,11 @@ canvas {
 #genre-list h1{
     display: inline;
 }
-.genre-triggers:hover {
+.genre-triggers:hover, .station-triggers:hover {
     cursor: pointer;
+}
+#stations-list{
+    display: none;
 }
 #about{
     display: none;
@@ -318,14 +320,6 @@ canvas {
     margin-left: 20px;
 }
 .close-button {
-    /*display: inline-block;*/
-    /*/!*position: relative;*!/*/
-    /*/!*right: 10px;*!/*/
-    /*/!*bottom: 10px;*!/*/
-    /*text-align: right;*/
-    /*font-size: 48px;*/
-    /*z-index: 10;*/
-    /*padding-right: 10px;*/
     cursor: pointer;
 }
 @media screen and (min-width: 481px){
@@ -343,6 +337,11 @@ canvas {
 }
 #colors{
     display: none;
+    padding: 5px;
+}
+#colors button{
+    display: inline;
+    margin: 3px;
 }
 #red-theme{
     background-color: #f44336;
