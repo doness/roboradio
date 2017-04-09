@@ -341,3 +341,15 @@ canvas {
 #about h1{
     display: inline;
 }
+#colors{
+    display: none;
+}
+#red-theme{
+    background-color: #f44336;
+}
+#green-theme {
+    background-color: #4CAF50;
+}
+#default-blue-theme {
+    background-color: #03A9F4;
+}

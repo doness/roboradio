@@ -1,0 +1,16 @@
+.number-button {
+    background-color: #f44336;
+}
+
+.player-buttons-flex button {
+    background-color: #f44336;
+}
+canvas {
+    border: solid 2px #f44336;
+}
+a, a:visited {
+    color: #f44336;
+}
+.station-info {
+    background-color: #f44336;
+}

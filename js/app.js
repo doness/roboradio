@@ -1072,29 +1072,51 @@ $("#6").click(function(){
     playMusic();
 });
 
+//  color switching
+
+
+$(".colorswitch").click(function(e){
+    var newColor = this.getAttribute("data-color");
+    var css = "css/" + newColor + ".css";
+    $("#theme-switcher").attr("href", "css/" + newColor + ".css");
+    console.log("Colors changed to" + newColor );
+    showPlayer();
+});
+
+
 // DYNAMIC VIEWS
 // ------------------------------
 
 // hide the other views initially so they don't appear until called
 $("#genre-list").hide();
 $("#about").hide();
+$("#colors").hide();
 
 //views
 
 function showPlayer() {
     $("#genre-list").hide();
     $("#about").hide();
+    $("#colors").hide();
     $("section").show();
 }
 function showGenre(){
     $("section").hide();
     $("#about").hide();
+    $("#colors").hide();
     $("#genre-list").show();
 }
 function showAbout(){
     $("section").hide();
     $("#genre-list").hide();
+    $("#colors").hide();
     $("#about").show();
+}
+function showColors(){
+    $("section").hide();
+    $("#genre-list").hide();
+    $("#about").hide();
+    $("#colors").show();
 }
 
 
@@ -1116,6 +1138,16 @@ function aboutToggle(){
     }
 }
 
+function colorsToggle(){
+    if ($("#colors").is(":visible")){
+        $("#colors").hide();
+        showPlayer();
+    } else {
+        showColors();
+    }
+}
+
+
 //navigation for views
 
 $("#genre-list-trigger").click(function(){
@@ -1130,10 +1162,13 @@ $("#robot").click(function(){
     showPlayer();
 });
 
+$("#colors-trigger").click(function(){
+    colorsToggle();
+});
+
 $(".close-button").click(function(){
     showPlayer();
 });
-
 
 
 //  create the genre list from the music array
@@ -1153,10 +1188,6 @@ $(".genre-triggers").click(function(e){
     showPlayer();
     playMusic();
 });
-
-
-
-
 
 
 //lightning Courtesy of Akimitsu Hamamuro  MIT license @ codepen   http://codepen.io/akm2/pen/LuDba
