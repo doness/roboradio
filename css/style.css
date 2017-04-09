@@ -54,11 +54,6 @@ a:hover, a:active{
 }
 
 
-/*#animation{*/
-    /*position: relative;*/
-    /*left: 28px;*/
-/*}*/
-
 .arm{
     height: 20vw;
     position: relative;
@@ -314,6 +309,11 @@ canvas {
 #stations-list{
     display: none;
 }
+#stations h3{
+    display: inline-block;
+    padding: 5px;
+    width: 400px;
+}
 #about{
     display: none;
     margin-right: auto;
@@ -331,9 +331,9 @@ canvas {
         width: 300px;
     }
 }
-
 #about h1{
     display: inline;
+    padding: 5px;
 }
 #colors{
     display: none;
