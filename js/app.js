@@ -1075,7 +1075,7 @@ $(".colorswitch").click(function (e) {
     var newColor = this.getAttribute("data-color");
     var css = "css/" + newColor + ".css";
     $("#theme-switcher").attr("href", "css/" + newColor + ".css");
-    console.log("Colors changed to" + newColor);
+    console.log("Colors changed to " + newColor);
     showPlayer();
 });
 
@@ -1974,12 +1974,4 @@ Point.prototype = {
     };
     loop();
 })();
-
-//id3 Tagging
-
-
-
-
-
-
-
+// the end
