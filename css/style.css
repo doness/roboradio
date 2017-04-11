@@ -86,14 +86,8 @@ a:hover, a:active{
 }
 
 .speaker {
-    /*max-width: 20vw;*/
-    /*max-height: 20vh;*/
-    /*padding: 5px;*/
-    /*width: 60px;*/
-    /*height: 60px;*/
-    /*z-index: 10;*/
-    width: 14vw;
-    height: 14vw;
+    width: 13vw;
+    height: 13vw;
     z-index: 10;
 }
 
@@ -142,8 +136,8 @@ background-color: #03A9F4;
 
     margin: 2px;
     padding: 2px;
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 2px solid #212121;
 }
@@ -202,6 +196,11 @@ background-color: #03A9F4;
     position: relative;
     bottom: 25px;
 }
+.vis {
+    width: 80px;
+    border-radius: 20px;
+}
+
 
 .app {
     border-radius: 20px;
@@ -254,10 +253,11 @@ canvas {
     border-radius: 20px;
     width: 80vw;
     max-width: 1100px;
-    height: 44vh;
+    height: 30vh;
     margin-left: auto;
     margin-right: auto;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
     z-index: 10;
     border: solid 2px #03A9F4;
 }
@@ -287,9 +287,11 @@ canvas {
     position: relative;
     bottom: 30px;
 }
-.canvas-div {
+#visuals {
     align-content: center;
+    display: none;
 }
+
 .navbar-nav{
     position: relative;
     left: 10px;

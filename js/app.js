@@ -137,7 +137,7 @@ var musicarray = [
             stationNumber: 4
         },
         {
-            info: "Blues Rock Audiophile",
+            info: "Blues Audiophile",
             url: "http://8.38.78.173:8240/;steam.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
@@ -176,7 +176,7 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "Classic Rock New York",
+            info: "Classic Rock NY",
             url: "http://45.79.186.124:8351/stream.nsv&type=mp3",
             genre: "Classic Rock",
             genreNumber: 3,
@@ -254,7 +254,7 @@ var musicarray = [
             stationNumber: 1
         },
         {
-            info: "Unsigned Hype Hip Hop",
+            info: "Unsigned Hype",
             url: "http://51.255.83.127:9597/Live?stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
@@ -268,7 +268,7 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "POWER 101.8 New York",
+            info: "POWER 101.8 NY",
             url: "http://206.190.136.141:4383/Live?stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
@@ -314,14 +314,14 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "TriChrome World Radio",
+            info: "TriChrome World",
             url: "http://173.192.105.231:1309/Live?stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
             stationNumber: 4
         },
         {
-            info: "Gabriel\'s Smooth Drops",
+            info: "Smooth Drops",
             url: "http://5.2.229.172:9876/;?stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
@@ -438,7 +438,7 @@ var musicarray = [
             stationNumber: 1
         },
         {
-            info: "PowerHitz Total Country",
+            info: "PowerHitz Country",
             url: "http://66.85.88.174/country?stream.nsv&type=mp3",
             genre: "Modern Country",
             genreNumber: 9,
@@ -459,7 +459,7 @@ var musicarray = [
             stationNumber: 4
         },
         {
-            info: "Calm Country Radio Now",
+            info: "Calm Country",
             url: "http://184.173.142.117:13828/stream?stream.nsv&type=mp3",
             genre: "Modern Country",
             genreNumber: 9,
@@ -470,7 +470,7 @@ var musicarray = [
     //Classic Country GENRE
     [
         {
-            info: "Today's Classic Country",
+            info: "Today's Country",
             url: "http://108.163.197.114:8249/stream?stream.nsv&type=mp3",
             genre: "Classic Country",
             genreNumber: 10,
@@ -523,7 +523,7 @@ var musicarray = [
             stationNumber: 0
         },
         {
-            info: "Rock Melodic Radio",
+            info: "Melodic Rock",
             url: "http://37.59.14.77:8124/stream?stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
@@ -537,7 +537,7 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "Sonora Classic Metal",
+            info: "Sonora Metal",
             url: "http://46.105.122.141:6664/;?stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
@@ -562,35 +562,35 @@ var musicarray = [
     //METAL GENRE
     [
         {
-            info: "Metal Nation Radio",
+            info: "Metal Nation",
             url: "http://91.121.164.210:8380/stream?stream.nsv&type=mp3",
             genre: "Metal",
             genreNumber: 12,
             stationNumber: 0
         },
         {
-            info: "Metal Rock Radio",
+            info: "Rock & Metal",
             url: "http://192.99.62.212:9964/stream?stream.nsv&type=mp3",
             genre: "Metal",
             genreNumber: 12,
             stationNumber: 1
         },
         {
-            info: "BrainGell Radio-BGR",
+            info: "BrainGell",
             url: "http://5.189.142.165:8096/stream?stream.nsv&type=mp3",
             genre: "Metal",
             genreNumber: 12,
             stationNumber: 2
         },
         {
-            info: "MetalHead Radio",
+            info: "MetalHead",
             url: "http://198.178.121.76:8012/stream?stream.nsv&type=mp3",
             genre: "Metal",
             genreNumber: 12,
             stationNumber: 3
         },
         {
-            info: "Prog Palace Radio",
+            info: "Prog Palace",
             url: "http://199.168.117.61:8006/stream?stream.nsv&type=mp3",
             genre: "Metal",
             genreNumber: 12,
@@ -615,7 +615,7 @@ var musicarray = [
             stationNumber: 0
         },
         {
-            info: "Bazooka Radio Psychobilly",
+            info: "Bazooka Psychobilly",
             url: "http://86.105.205.246:30130/;?stream.nsv&type=mp3",
             genre: "Rockabilly",
             genreNumber: 13,
@@ -629,7 +629,7 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "Elvis Presley Radio",
+            info: "Elvis Presley",
             url: "http://37.59.42.207:8385/stream2?stream.nsv&type=mp3",
             genre: "Rockabilly",
             genreNumber: 13,
@@ -682,7 +682,7 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "Malfunction Radio",
+            info: "Malfunction",
             url: "http://188.165.240.90:8424/stream?stream.nsv&type=mp3",
             genre: "Alternative",
             genreNumber: 14,
@@ -728,7 +728,7 @@ var musicarray = [
             stationNumber: 3
         },
         {
-            info: "Punk Rock Demonstration",
+            info: "Punk Rock",
             url: "http://199.87.239.197:8000/;?stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
@@ -838,7 +838,7 @@ var musicarray = [
     // Classical Symphony GENRE
     [
         {
-            info: "Radio Classic Mozart ",
+            info: "Classic Mozart ",
             url: "http://37.251.146.169:8300/stream?stream.nsv&type=mp3",
             genre: "Classical",
             genreNumber: 18,
@@ -852,28 +852,28 @@ var musicarray = [
             stationNumber: 1
         },
         {
-            info: "Radio Classic Romania",
+            info: "Classic Romania",
             url: "http://37.251.146.169:8000/stream?stream.nsv&type=mp3",
             genre: "Classical",
             genreNumber: 18,
             stationNumber: 2
         },
         {
-            info: "Radio Classic Beethoven",
+            info: "Classic Beethoven",
             url: "http://37.251.146.169:7200/stream2?stream.nsv&type=mp3",
             genre: "Classical",
             genreNumber: 18,
             stationNumber: 3
         },
         {
-            info: "Wayyradio Piano Classical",
+            info: "Wayyradio Piano",
             url: "http://37.59.42.207:8367/stream?stream.nsv&type=mp3",
             genre: "Classical",
             genreNumber: 18,
             stationNumber: 0
         },
         {
-            info: "Radio Music101 Piano",
+            info: "Music101 Piano",
             url: "http://37.59.42.207:8559/stream2?stream.nsv&type=mp3",
             genre: "Classical",
             genreNumber: 18,
@@ -905,21 +905,21 @@ var musicarray = [
             stationNumber: 2
         },
         {
-            info: "DFW Caribbean Radio",
+            info: "DFW Caribbean",
             url: "http://69.197.169.178:30202/;?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 3
         },
         {
-            info: "NLR Roots Radio",
+            info: "NLR Roots",
             url: "http://91.121.205.70:4062/;?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 4
         },
         {
-            info: "upyd692 radio",
+            info: "UPYD 692 ",
             url: "http://91.121.205.70:4062/;?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
@@ -1088,6 +1088,7 @@ $("#genre-list").hide();
 $("#about").hide();
 $("#colors").hide();
 $("#stations-list").hide();
+$("#visuals").hide();
 
 //views
 
@@ -1096,35 +1097,35 @@ function showPlayer() {
     $("#stations-list").hide();
     $("#about").hide();
     $("#colors").hide();
-    $("section").show();
+    $("section").fadeIn();
 }
 function showGenre() {
     $("section").hide();
     $("#stations-list").hide();
     $("#about").hide();
     $("#colors").hide();
-    $("#genre-list").show();
+    $("#genre-list").fadeIn();
 }
 function showAbout() {
     $("section").hide();
     $("#stations-list").hide();
     $("#genre-list").hide();
     $("#colors").hide();
-    $("#about").show();
+    $("#about").fadeIn();
 }
 function showColors() {
     $("section").hide();
     $("#stations-list").hide();
     $("#genre-list").hide();
     $("#about").hide();
-    $("#colors").show();
+    $("#colors").fadeIn();
 }
 function showStations() {
     $("section").hide();
     $("#genre-list").hide();
     $("#about").hide();
     $("#colors").hide();
-    $("#stations-list").show();
+    $("#stations-list").fadeIn();
 }
 
 
@@ -1162,6 +1163,14 @@ function stationsToggle() {
         showStations();
     }
 }
+function visToggle() {
+    if ($("#visuals").is(":visible")) {
+        $("#visuals").slideUp();
+    } else {
+        $("#visuals").slideDown();
+    }
+}
+
 
 //navigation for views
 
@@ -1188,7 +1197,9 @@ $("#colors-trigger").click(function () {
 $(".close-button").click(function () {
     showPlayer();
 });
-
+$("#vis-toggle").click(function(){
+    visToggle();
+});
 
 //  create the genre list from the music array
 
