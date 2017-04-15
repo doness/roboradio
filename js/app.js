@@ -941,14 +941,8 @@ var player = {
 
 var currentAudio = new Audio(player.station.url);
 
-var genres = [
-    "blues", "rock", "pop", "electronic", "rap", "country",
-];
-
-
 function pause() {
     currentAudio.pause();
-
     $($speaker).removeClass("pulsing");
     $($animation).addClass("stopped");
     player.paused = true;
@@ -960,11 +954,9 @@ function playMusic() {
     player.paused = false;
     $($pauseButton).value = "";
     $($animation).removeClass("stopped");
-
     $($speaker).addClass("pulsing");
     currentAudio.play();
 }
-
 
 function startStopper() {
     if (player.paused === false) {
@@ -973,7 +965,6 @@ function startStopper() {
         playMusic();
     }
 }
-
 
 function setStation(newStation) {
     player.station = newStation;
@@ -1023,50 +1014,18 @@ $("#genre-next").click(function () {
 
 $("#random").click(function () {
     pickGenre = Math.floor(Math.random() * musicarray.length);
-    pickSong = Math.floor(Math.random() * musicarray[pickGenre].length)
+    pickSong = Math.floor(Math.random() * musicarray[pickGenre].length);
     setStation(musicarray[pickGenre][pickSong]);
     playMusic();
     console.log("Picked random " + player.station.genre + " " + player.station.info);
 });
 
-
-$("#1").click(function () {
-
-    setStation(musicarray[player.genreNumber][0]);
+$(".number-button").click(function (e) {
+    newStation = this.getAttribute('data-station');
+    setStation(musicarray[player.genreNumber][newStation]);
     playMusic();
 });
 
-
-$("#2").click(function () {
-
-    setStation(musicarray[player.genreNumber][1]);
-    playMusic();
-});
-
-
-$("#3").click(function () {
-
-    setStation(musicarray[player.genreNumber][2]);
-    playMusic();
-});
-
-$("#4").click(function () {
-
-    setStation(musicarray[player.genreNumber][3]);
-    playMusic();
-});
-
-$("#5").click(function () {
-
-    setStation(musicarray[player.genreNumber][4]);
-    playMusic();
-});
-
-$("#6").click(function () {
-
-    setStation(musicarray[player.genreNumber][5]);
-    playMusic();
-});
 
 //  color switching
 
@@ -1090,41 +1049,35 @@ $("#colors").hide();
 $("#stations-list").hide();
 $("#visuals").hide();
 
+function hideAllViews(){
+    $("#genre-list").hide();
+    $("#about").hide();
+    $("#colors").hide();
+    $("#stations-list").hide();
+    //$("#visuals").hide();
+    $("section").hide();
+}
+
 //views
 
 function showPlayer() {
-    $("#genre-list").hide();
-    $("#stations-list").hide();
-    $("#about").hide();
-    $("#colors").hide();
+    hideAllViews();
     $("section").fadeIn();
 }
 function showGenre() {
-    $("section").hide();
-    $("#stations-list").hide();
-    $("#about").hide();
-    $("#colors").hide();
+    hideAllViews();
     $("#genre-list").fadeIn();
 }
 function showAbout() {
-    $("section").hide();
-    $("#stations-list").hide();
-    $("#genre-list").hide();
-    $("#colors").hide();
+    hideAllViews();
     $("#about").fadeIn();
 }
 function showColors() {
-    $("section").hide();
-    $("#stations-list").hide();
-    $("#genre-list").hide();
-    $("#about").hide();
+    hideAllViews();
     $("#colors").fadeIn();
 }
 function showStations() {
-    $("section").hide();
-    $("#genre-list").hide();
-    $("#about").hide();
-    $("#colors").hide();
+    hideAllViews();
     $("#stations-list").fadeIn();
 }
 
@@ -1187,7 +1140,7 @@ $("#about-trigger").click(function () {
 });
 
 $("#robot").click(function () {
-    showPlayer();
+    aboutToggle();
 });
 
 $("#colors-trigger").click(function () {
@@ -1199,6 +1152,25 @@ $(".close-button").click(function () {
 });
 $("#vis-toggle").click(function(){
     visToggle();
+});
+
+$(".list-station-link").click(function(){
+    stationsToggle();
+});
+
+$(".list-genre-link").click(function(){
+    genreToggle();
+});
+
+$(".list-theme-link").click(function(){
+    showColors();
+});
+$("#show-lists").click(function(){
+   showGenre();
+});
+
+$("#theme-player-button").click(function(){
+    showColors();
 });
 
 //  create the genre list from the music array
@@ -1985,4 +1957,4 @@ Point.prototype = {
     };
     loop();
 })();
-// the end
+// lightning end

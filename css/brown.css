@@ -1,21 +1,24 @@
 
 .number-button {
-    background-color: #795548;
+    background-color: #BCAAA4;
 }
 
 .player-buttons-flex button {
-    background-color: #795548;
+    background-color: #BCAAA4;
 }
 canvas {
-    border: solid 2px #795548;
+    border: solid 2px #BCAAA4;
 }
 a, a:visited {
-    color: #795548;
+    color: #BCAAA4;
 }
 .station-info {
-    background-color: #795548;
+    background-color: #BCAAA4;
 }
 .app {
-    background-color: #BCAAA4;
-    background: #BCAAA4;
+    background-color: #795548;
+    background: #795548;
 }
+
+
+
