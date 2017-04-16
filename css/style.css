@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #212121;
+    background-color: #424242;
     color: snow;
     font-family: Century Gothic, sans-serif;
     border-radius: 5px;
@@ -17,6 +17,18 @@ a, a:visited {
 }
 a:hover, a:active{
     color: #212121;
+}
+
+#toys {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 90vw;
+    height: 46vh;
+    border: solid 2px #212121;
+    display: block;
 }
 
 .app {
@@ -61,7 +73,7 @@ a:hover, a:active{
 #advertisements{
     position: fixed;
     bottom: 5px;
-    left: 5px;
+    left: 15vw;
     width: 70vw;
     height: 40px;
     background-color: snow;
@@ -203,6 +215,15 @@ background-color: #03A9F4;
     width: 80px;
     border-radius: 20px;
 }
+.toy-button{
+    background-color: #212121;
+    margin: 2px;
+    padding: 2px;
+    height: 32px;
+    border: 2px solid #212121;
+    width: 80px;
+    border-radius: 20px;
+}
 
 
 .app {
@@ -264,9 +285,9 @@ canvas {
     border: solid 2px #03A9F4;
 }
 .robot{
-    height: 50px;
+    height: 40px;
     position: fixed;
-    right: 5px;
+    right: 10px;
     bottom: 5px;
     z-index: 25;
 }
@@ -303,7 +324,8 @@ canvas {
 #genre-list {
     display: none;
     margin-right: auto;
-    margin-left: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 .genre-names{
     color: #9E9E9E;
@@ -364,7 +386,7 @@ canvas {
 }
 #colors button{
     display: inline;
-    margin: 3px;
+    /*margin: 3px;*/
 }
 #red-theme{
     background-color: #f44336;
@@ -392,4 +414,13 @@ canvas {
 }
 #yellow-theme {
     background-color: #FDD835;
+}
+.navigational-buttons{
+    padding: 5px;
+}
+#hoverboard{
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25vh;
 }
