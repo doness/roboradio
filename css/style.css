@@ -200,28 +200,28 @@ background-color: #03A9F4;
 .vis {
     background-color: #212121;
     margin: 2px;
-    padding: 2px;
+    /*padding: 2px;*/
     height: 32px;
     border: 2px solid #212121;
-    width: 80px;
+    width: auto;
     border-radius: 20px;
 }
 #theme-player-button {
     background-color: #212121;
     margin: 2px;
-    padding: 2px;
+    /*padding: 2px;*/
     height: 32px;
     border: 2px solid #212121;
-    width: 80px;
+    width: auto;
     border-radius: 20px;
 }
 .toy-button{
     background-color: #212121;
     margin: 2px;
-    padding: 2px;
+    /*padding: 2px;*/
     height: 32px;
     border: 2px solid #212121;
-    width: 80px;
+    width: auto;
     border-radius: 20px;
 }
 
