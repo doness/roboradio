@@ -285,7 +285,7 @@ canvas {
     border: solid 2px #03A9F4;
 }
 .robot{
-    height: 40px;
+    width: 40px;
     position: fixed;
     right: 10px;
     bottom: 5px;
