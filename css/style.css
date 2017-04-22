@@ -447,9 +447,9 @@ padding: 10px;
     margin-right: auto;
 }
 
-/*@media screen and (max-width: 481px){*/
-    /*#volume, #volume label, #volume-slider {*/
-        /*display: none;*/
-    /*}*/
+@media screen and (max-width: 767px){
+    #volume, #volume label, #volume-slider {
+        display: none;
+    }
 
-/*}*/
+}

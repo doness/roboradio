@@ -1243,12 +1243,12 @@ $("#volume-slider").mouseup(function(){
 $("#volume-slider").click(function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
-$("#volume-slider").on("tap",function(){
-    currentAudio.volume = ($("#volume-slider")[0].value / 100);
-});
-$("#volume-slider").on("swipe",function(){
-    currentAudio.volume = ($("#volume-slider")[0].value / 100);
-});
+//$("#volume-slider").on("tap",function(){
+//    currentAudio.volume = ($("#volume-slider")[0].value / 100);
+//});
+//$("#volume-slider").on("swipe",function(){
+//    currentAudio.volume = ($("#volume-slider")[0].value / 100);
+//});
 
 
 
