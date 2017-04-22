@@ -949,13 +949,17 @@ function pause() {
 }
 
 function playMusic() {
-
+    var vol = currentAudio.volume;
     currentAudio.src = player.station.url;
     player.paused = false;
     $($pauseButton).value = "";
     $($animation).removeClass("stopped");
     $($speaker).addClass("pulsing");
+    currentAudio.volume = (vol / 4);
     currentAudio.play();
+    setTimeout(function(){currentAudio.volume = (vol / 3);},300);
+    setTimeout(function(){currentAudio.volume = (vol / 2);},600);
+    setTimeout(function(){currentAudio.volume = (vol / 1);},900);
 }
 
 function startStopper() {

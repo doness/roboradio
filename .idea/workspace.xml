@@ -41,8 +41,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40384614">
-              <caret line="1227" column="33" selection-start-line="1227" selection-start-column="33" selection-end-line="1227" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.5591716">
+              <caret line="959" column="4" selection-start-line="959" selection-start-column="4" selection-end-line="959" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="419" column="1" selection-start-line="419" selection-start-column="1" selection-end-line="419" selection-end-column="1" />
+              <caret line="454" column="3" selection-start-line="449" selection-start-column="2" selection-end-line="454" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -775,15 +775,15 @@
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="419" column="1" selection-start-line="419" selection-start-column="1" selection-end-line="419" selection-end-column="1" />
+          <caret line="454" column="3" selection-start-line="449" selection-start-column="2" selection-end-line="454" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40384614">
-          <caret line="1227" column="33" selection-start-line="1227" selection-start-column="33" selection-end-line="1227" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.5591716">
+          <caret line="959" column="4" selection-start-line="959" selection-start-column="4" selection-end-line="959" selection-end-column="4" />
           <folding />
         </state>
       </provider>
