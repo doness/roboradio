@@ -26,7 +26,7 @@ a:hover, a:active{
     margin-top: 5px;
     margin-bottom: 5px;
     width: 90vw;
-    height: 46vh;
+    height: 44vh;
     border: solid 2px #212121;
     display: block;
 }
@@ -436,4 +436,18 @@ canvas {
 }
 .lower-buttons {
     font-size: 0.9em;
+}
+#volume{
+padding: 10px;
+}
+#volume-slider {
+  width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 481px){
+    #volume, #volume label, #volume-slider {
+        display: none;
+    }
+
 }

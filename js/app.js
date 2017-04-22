@@ -1231,6 +1231,11 @@ $("#attenuate").click(function(){
     }
 
 });
+
+$("#volume-slider").mouseup(function(){
+    currentAudio.volume = ($("#volume-slider")[0].value / 100);
+});
+
 //ID3 tagging
 
 //
