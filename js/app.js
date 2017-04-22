@@ -1223,7 +1223,7 @@ $(".station-triggers").click(function (e) {
     playMusic();
 });
 
-$("#volume-half").click(function(){
+$("#attenuate").click(function(){
     if (currentAudio.volume === 1){
         currentAudio.volume = 0.25;
     } else {

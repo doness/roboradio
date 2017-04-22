@@ -424,3 +424,16 @@ canvas {
     margin-right: auto;
     height: 25vh;
 }
+#theme-player-button{
+    background: rgb(255,50,50);
+    background: -moz-linear-gradient(-45deg, rgba(255,50,50,1) 0%, rgba(255,194,40,1) 15%, rgba(255,255,40,1) 25%, rgba(65,252,40,1) 37%, rgba(125,185,232,1) 51%, rgba(41,137,216,1) 65%, rgba(175,33,173,1) 86%);
+    background: -webkit-linear-gradient(-45deg, rgba(255,50,50,1) 0%,rgba(255,194,40,1) 15%,rgba(255,255,40,1) 25%,rgba(65,252,40,1) 37%,rgba(125,185,232,1) 51%,rgba(41,137,216,1) 65%,rgba(175,33,173,1) 86%);
+    background: linear-gradient(135deg, rgba(255,50,50,1) 0%,rgba(255,194,40,1) 15%,rgba(255,255,40,1) 25%,rgba(65,252,40,1) 37%,rgba(125,185,232,1) 51%,rgba(41,137,216,1) 65%,rgba(175,33,173,1) 86%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#af21ad',GradientType=1 );
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.lower-buttons {
+    font-size: 0.9em;
+}

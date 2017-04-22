@@ -16,10 +16,14 @@
 		}
 
 		function Blob(x, y) {
+				var my_gradient=ctx.createLinearGradient(0,0,170,0);
+				my_gradient.addColorStop(0,"black");
+				my_gradient.addColorStop(0.5,"red");
+				my_gradient.addColorStop(1,"white");
 				this.blob = document.createElement('canvas');
 				this.blob.width = this.blob.height = rad * 2;
 				var ict = this.blob.getContext('2d');
-				ict.fillStyle = "#CFD8DC";
+				ict.fillStyle = "#4527A0";
 				ict.arc(rad, rad, rad, 0, 2 * Math.PI);
 				ict.fill();
 				this.x = x;
