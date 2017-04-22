@@ -17,7 +17,7 @@ button {
 
 h1 {
   font-size: calc(30pt + 1.65vw);
-  margin-top: 40vh;
+  margin-top: 20px;
 }
 
 button,
@@ -113,7 +113,7 @@ input:checked + .bubble {
 .score {
   font-size: calc(30pt + 1.1vw);
   margin-left: -35px;
-  top: calc(50px + 2.2vw);
+  top: 20px;
   left: 50%;
   width: 70px;
 }
