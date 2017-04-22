@@ -952,7 +952,7 @@ function playMusic() {
     var vol = currentAudio.volume;
     currentAudio.src = player.station.url;
     player.paused = false;
-    $($pauseButton).value = "";
+    //$($pauseButton).innerHTML = "";
     $($animation).removeClass("stopped");
     $($speaker).addClass("pulsing");
     currentAudio.volume = (vol / 4);
@@ -1237,6 +1237,13 @@ $("#attenuate").click(function(){
 });
 
 $("#volume-slider").mouseup(function(){
+    currentAudio.volume = ($("#volume-slider")[0].value / 100);
+});
+
+$("#volume-slider").click(function(){
+    currentAudio.volume = ($("#volume-slider")[0].value / 100);
+});
+$("#volume-slider").on("tap",function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
 
