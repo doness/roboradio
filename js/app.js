@@ -957,9 +957,8 @@ function playMusic() {
     $($speaker).addClass("pulsing");
     currentAudio.volume = (vol / 4);
     currentAudio.play();
-    setTimeout(function(){currentAudio.volume = (vol / 3);},500);
-    setTimeout(function(){currentAudio.volume = (vol / 2);},1000);
-    setTimeout(function(){currentAudio.volume = (vol / 1);},1500);
+    setTimeout(function(){currentAudio.volume = (vol / 2);},250);
+    setTimeout(function(){currentAudio.volume = (vol / 1);},500);
 }
 
 function startStopper() {
