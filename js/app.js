@@ -3,7 +3,6 @@
 var $animation = document.getElementById("animation");
 var $speaker = document.getElementsByClassName("speaker");
 var $pauseButton = document.getElementById("playPause");
-
 var musicarray = [
 
     //POP GENRE
@@ -940,6 +939,7 @@ var player = {
 };
 
 var currentAudio = new Audio(player.station.url);
+currentAudio.volume = 0.8;
 
 function pause() {
     currentAudio.pause();
@@ -1224,10 +1224,10 @@ $(".station-triggers").click(function (e) {
 });
 
 $("#attenuate").click(function(){
-    if (currentAudio.volume === 1){
-        currentAudio.volume = 0.25;
+    if (currentAudio.volume === 0.20){
+        currentAudio.volume = 0.9;
     } else {
-        currentAudio.volume = 1;
+        currentAudio.volume = 0.20;
     }
 
 });
