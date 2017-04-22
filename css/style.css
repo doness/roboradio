@@ -444,7 +444,7 @@ padding: 10px;
 #volume-slider {
     background-color: #212121;
     width: 80vw;
-    height: 1.2em;
+    height: 1.7em;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -452,7 +452,6 @@ padding: 10px;
 input[type='range'] {
     -webkit-appearance: none !important;
     background:#212121;
-    height: 7px;
     border-radius: 20px;
 }
 /*@media screen and (max-width: 767px){*/
