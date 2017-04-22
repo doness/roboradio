@@ -13,7 +13,7 @@ h3 {
     text-shadow: 1px 2px 2px #212121;
 }
 a, a:visited {
-    color: #03A9F4;
+    color: #9E9E9E;
 }
 a:hover, a:active{
     color: #212121;
@@ -34,36 +34,13 @@ a:hover, a:active{
 .app {
     border: 10px solid #212121;
     border-radius: 10px;
-    background-color: #BBDEFB;
-    background: #BBDEFB;
+    background-color: #616161;
+    background: #616161;
 }
 .navbar-nav li{
     display: inline-flex;
 }
 
-#anim-wrapper {
-    text-align: center;
-    background-color: #37474F;
-    border-radius: 20px;
-    margin: 10px;
-    border: 2px solid #212121;
-    background: #7d7e7d;
-    background: -moz-linear-gradient(top, #7d7e7d 0%, #212121 100%);
-    background: -webkit-linear-gradient(top, #7d7e7d 0%,#212121 100%);
-    background: linear-gradient(to bottom, #7d7e7d 0%,#212121 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#212121',GradientType=0 );
-    max-width: 600px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px;
-}
-
-#anim-wrapper img {
-
-    max-width: 20vw;
-    max-height: 20vh;
-    padding: 5px;
-}
 
 .pointer {
     cursor: pointer;
@@ -146,7 +123,7 @@ a:hover, a:active{
 
 
 .number-button {
-background-color: #03A9F4;
+background-color: #9E9E9E;
 
     margin: 2px;
     padding: 2px;
@@ -173,12 +150,7 @@ background-color: #03A9F4;
     background-color: #212121;
     border: 2px solid #000;
     margin: 10px;
-
-    background: #03A9F4;
-    /*background: -moz-linear-gradient(top, #b4ddb4 0%, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%);*/
-    /*background: -webkit-linear-gradient(top, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);*/
-    /*background: linear-gradient(to bottom, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=0 );*/
+    background: #9E9E9E;
     width: 60vw;
     max-width: 480px;
     margin-right: auto;
@@ -258,7 +230,7 @@ background-color: #03A9F4;
 
 
 .player-buttons-flex button {
-    background-color: #03A9F4;
+    background-color: #9E9E9E;
     border-radius: 40px;
     height: 44px;
     width: 44px;
@@ -458,6 +430,8 @@ input[type='range'] {
 label{
     color: #212121;
 }
+
+/* this hides the volume slider on mobile
 /*@media screen and (max-width: 767px){*/
     /*#volume, #volume label, #volume-slider {*/
         /*display: none;*/
