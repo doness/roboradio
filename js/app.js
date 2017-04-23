@@ -1352,7 +1352,7 @@ try {
 
 
 $("#add-fav").click(function(){
-    if (favorites.length <5){
+    if (favorites.length <20){
         var save = undefined;
         favorites.push(player.station);
         save = JSON.stringify(favorites);
@@ -1360,10 +1360,11 @@ $("#add-fav").click(function(){
         cookie = getCookie("favorites");
         //baked = JSON.parse(cookie);
         //favorites = baked;
-        alert(player.station.info + " saved");
-        setTimeout(window.location.reload(), 300);
+        alert(player.station.info + " saved in your favorites list");
+        setTimeout(window.location.reload(), 100);
     } else {
-        alert("Sorry, Only 5 Favorites can be saved.");
+        alert("Sorry, Only 20 Favorites can be saved.");
+        setTimeout(window.location.reload(), 100);
     }
     makeFavorites();
 
