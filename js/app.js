@@ -224,7 +224,7 @@ var musicarray   = [
         },
         {
             info: "103.7 DA BEAT",
-            url: "http://46.105.122.141:8742/?stream.nsv&type=mp3",
+            url: "http://46.105.122.141:8742/stream.nsv&type=mp3",
             genre: "Hip Hop",
             genreNumber: 4,
             stationNumber: 4
@@ -380,7 +380,7 @@ var musicarray   = [
     [
         {
             info: "RADIO K KUOM",
-            url: "http://128.101.73.38:8256/?stream.nsv&type=mp3",
+            url: "http://128.101.73.38:8256/stream.nsv&type=mp3",
             genre: "College",
             genreNumber: 8,
             stationNumber: 0
@@ -617,7 +617,7 @@ var musicarray   = [
         },
         {
             info: "Bazooka Psychobilly",
-            url: "http://86.105.205.246:30130/?stream.nsv&type=mp3",
+            url: "http://86.105.205.246:30130/stream.nsv&type=mp3",
             genre: "Rockabilly",
             genreNumber: 13,
             stationNumber: 1
@@ -709,7 +709,7 @@ var musicarray   = [
         },
         {
             info: "Gutter Punk Radio",
-            url: "http://23.228.66.67:8000/?stream.nsv&type=mp3",
+            url: "http://23.228.66.67:8000/stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
             stationNumber: 1
@@ -723,14 +723,14 @@ var musicarray   = [
         },
         {
             info: "Radio No Future",
-            url: "http://37.187.124.134:8100/?stream.nsv&type=mp3",
+            url: "http://37.187.124.134:8100/stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
             stationNumber: 3
         },
         {
             info: "Punk Rock",
-            url: "http://199.87.239.197:8000/?stream.nsv&type=mp3",
+            url: "http://199.87.239.197:8000/stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
             stationNumber: 4
@@ -808,7 +808,7 @@ var musicarray   = [
         },
         {
             info: "Tropicalisima Bachata",
-            url: "http://50.7.56.2:8024/?stream.nsv&type=mp3",
+            url: "http://50.7.56.2:8024/stream.nsv&type=mp3",
             genre: "Latin",
             genreNumber: 17,
             stationNumber: 2
@@ -900,28 +900,28 @@ var musicarray   = [
         },
         {
             info: "CCMLF Radio",
-            url: "http://69.197.169.178:27488/?stream.nsv&type=mp3",
+            url: "http://69.197.169.178:27488/stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 2
         },
         {
             info: "DFW Caribbean",
-            url: "http://69.197.169.178:30202/?stream.nsv&type=mp3",
+            url: "http://69.197.169.178:30202/stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 3
         },
         {
             info: "NLR Roots",
-            url: "http://91.121.205.70:4062/?stream.nsv&type=mp3",
+            url: "http://91.121.205.70:4062/stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 4
         },
         {
             info: "UPYD 692 ",
-            url: "http://91.121.205.70:4062/?stream.nsv&type=mp3",
+            url: "http://91.121.205.70:4062/stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 5
