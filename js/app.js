@@ -242,7 +242,7 @@ var musicarray   = [
     [
         {
             info: "TTTRadio.NET",
-            url: "http://69.143.55.164/?stream.nsv&type=mp3",
+            url: "http://69.143.55.164/stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
             stationNumber: 0
@@ -323,7 +323,7 @@ var musicarray   = [
         },
         {
             info: "Smooth Drops",
-            url: "http://5.2.229.172:9876/?stream.nsv&type=mp3",
+            url: "http://5.2.229.172:9876/stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
             stationNumber: 5
@@ -401,7 +401,7 @@ var musicarray   = [
         },
         {
             info: "101.5 The Hawk",
-            url: "http://142.222.6.62:8000/stream/2/?stream.nsv&type=mp3",
+            url: "http://142.222.6.62:8000/stream/2/stream.nsv&type=mp3",
             genre: "College",
             genreNumber: 8,
             stationNumber: 3
@@ -539,7 +539,7 @@ var musicarray   = [
         },
         {
             info: "Sonora Metal",
-            url: "http://46.105.122.141:6664/?stream.nsv&type=mp3",
+            url: "http://46.105.122.141:6664/stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
             stationNumber: 3
@@ -691,7 +691,7 @@ var musicarray   = [
         },
         {
             info: "Brittania",
-            url: "http://5.189.151.48/?stream.nsv&type=mp3",
+            url: "http://5.189.151.48/stream.nsv&type=mp3",
             genre: "Alternative",
             genreNumber: 14,
             stationNumber: 5
@@ -829,7 +829,7 @@ var musicarray   = [
         },
         {
             info: "Tropical 100 Bolero",
-            url: "http://108.54.234.102:8024/?stream.nsv&type=mp3",
+            url: "http://108.54.234.102:8024/stream.nsv&type=mp3",
             genre: "Latin",
             genreNumber: 17,
             stationNumber: 5
