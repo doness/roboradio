@@ -1343,7 +1343,7 @@ try {
         console.log("Favorite Stations Loaded");
     } else {
         favorites = [];
-        alert("You favorites list has been cleared.");
+        alert("Hello! Your favorites list has been cleared OR you don't have any favorite stations yet.");
     }
 } catch (e){
     console.log(e);

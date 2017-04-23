@@ -346,6 +346,8 @@ canvas {
 }
 .close-button {
     cursor: pointer;
+    font-size: 2em;
+    padding: 3px;
 }
 .btn-black{
     background-color: #212121;
