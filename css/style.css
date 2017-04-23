@@ -53,7 +53,7 @@ a:hover, a:active{
     border: 10px solid #212121;
     border-radius: 10px;
     background-color: #616161;
-    background: #616161;
+    /*background: #616161;*/
 }
 .navbar-nav li{
     display: inline-flex;
@@ -168,7 +168,7 @@ background-color: #9E9E9E;
     background-color: #212121;
     border: 2px solid #000;
     margin: 10px;
-    background: #9E9E9E;
+    background-color: #9E9E9E;
     width: 60vw;
     max-width: 480px;
     margin-right: auto;
