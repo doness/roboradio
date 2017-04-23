@@ -1340,14 +1340,19 @@ try {
         baked = JSON.parse(cookie);
         favorites = JSON.parse(cookie);
         makeFavorites();
-        alert("Favorite Stations Loaded ");
+        console.log("Favorite Stations Loaded");
     } else {
         favorites = [];
-        alert("No Cookie Found");
+        alert("You favorites list has been cleared.");
     }
 } catch (e){
     console.log(e);
-    console.log("Cookie was Broken");
+    alert("Your favorites list got broken, sorry. I will fix it for you.");
+    favorites = [];
+    var save = undefined;
+    setCookie("favorites", save, -100);
+    console.log("cleared favorites");
+    setTimeout(window.location.reload(), 300);
 }
 
 
@@ -1377,30 +1382,8 @@ function delete_cookie( name ) {
 
 $("#clear").click(function(){
     favorites = [];
-    //delete_cookie("favorites");
     var save = undefined;
-    //save = "";
     setCookie("favorites", save, -100);
-    //cookie = getCookie("favorites");
-    ////baked = JSON.parse(cookie);
-    //favorites = [];
-    //makeFavorites();
     console.log("cleared favorites");
     setTimeout(window.location.reload(), 300);
 });
-
-//
-//// Abra Cadabra
-//    $(".delete").click(function (e) {
-//        var deleteMe = this.getAttribute("data-fav");
-//        console.log(deleteMe);
-//        console.log("Deleting Station " + favorites[deleteMe].info);
-//        favorites.splice(deleteMe,1);
-//        save = JSON.stringify(favorites);
-//        console.log("saving" + save);
-//        setCookie("favorites", save, 365);
-//        cookie = getCookie("favorites");
-//        baked = JSON.parse(cookie);
-//        favorites = baked;
-//        makeFavorites();
-//    });
