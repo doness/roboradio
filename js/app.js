@@ -33,14 +33,14 @@ var musicarray   = [
         },
         {
             info: "StarDusk FM",
-            url: "http://206.190.136.141:1966/Live;stream.nsv&type=mp3",
+            url: "http://206.190.136.141:1966/Live/stream.nsv&type=mp3",
             genre: "Pop",
             genreNumber: 0,
             stationNumber: 3
         },
         {
             info: "Plus Radio",
-            url: "http://170.75.144.250:13338/;stream.nsv&type=mp3",
+            url: "http://170.75.144.250:13338/stream.nsv&type=mp3",
             genre: "Pop",
             genreNumber: 0,
             stationNumber: 4
@@ -105,42 +105,42 @@ var musicarray   = [
     [
         {
             info: "Bar-legends",
-            url: "http://50.7.98.106:8719/;stream.nsv&type=mp3",
+            url: "http://50.7.98.106:8719/stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
             stationNumber: 0
         },
         {
             info: "Deep Jams",
-            url: "http://74.50.122.103:9748/;stream.nsv&type=mp3",
+            url: "http://74.50.122.103:9748/stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
             stationNumber: 1
         },
         {
             info: "Music City Roadhouse",
-            url: "http://stereo.wavestreamer.com:5022/;stream.nsv&type=mp3",
+            url: "http://stereo.wavestreamer.com:5022/stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
             stationNumber: 2
         },
         {
             info: "big Blues Swing",
-            url: "http://www.bigblueswing.com:8002/;stream.nsv&type=mp3",
+            url: "http://www.bigblueswing.com:8002/stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
             stationNumber: 3
         },
         {
             info: "Caledonia\'s",
-            url: "http://66.55.82.222:8031/;stream.nsv&type=mp3",
+            url: "http://66.55.82.222:8031/stream.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
             stationNumber: 4
         },
         {
             info: "Blues Audiophile",
-            url: "http://8.38.78.173:8240/;steam.nsv&type=mp3",
+            url: "http://8.38.78.173:8240/steam.nsv&type=mp3",
             genre: "blues",
             genreNumber: 2,
             stationNumber: 5
@@ -151,14 +151,14 @@ var musicarray   = [
     [
         {
             info: "Rock Radio SI",
-            url: "http://212.18.63.135:9034/rock;stream.nsv&type=mp3",
+            url: "http://212.18.63.135:9034/rockstream.nsv&type=mp3",
             genre: "Classic Rock",
             genreNumber: 3,
             stationNumber: 0
         },
         {
             info: "Beatles Radio",
-            url: "http://64.40.99.76:8000/;stream.nsv&type=mp3",
+            url: "http://64.40.99.76:8000/stream.nsv&type=mp3",
             genre: "Classic Rock",
             genreNumber: 3,
             stationNumber: 1
@@ -225,7 +225,7 @@ var musicarray   = [
         },
         {
             info: "103.7 DA BEAT",
-            url: "http://46.105.122.141:8742/;?stream.nsv&type=mp3",
+            url: "http://46.105.122.141:8742/?stream.nsv&type=mp3",
             genre: "Hip Hop",
             genreNumber: 4,
             stationNumber: 4
@@ -324,7 +324,7 @@ var musicarray   = [
         },
         {
             info: "Smooth Drops",
-            url: "http://5.2.229.172:9876/;?stream.nsv&type=mp3",
+            url: "http://5.2.229.172:9876/?stream.nsv&type=mp3",
             genre: "Chillout",
             genreNumber: 6,
             stationNumber: 5
@@ -381,7 +381,7 @@ var musicarray   = [
     [
         {
             info: "RADIO K KUOM",
-            url: "http://128.101.73.38:8256/;?stream.nsv&type=mp3",
+            url: "http://128.101.73.38:8256/?stream.nsv&type=mp3",
             genre: "College",
             genreNumber: 8,
             stationNumber: 0
@@ -618,7 +618,7 @@ var musicarray   = [
         },
         {
             info: "Bazooka Psychobilly",
-            url: "http://86.105.205.246:30130/;?stream.nsv&type=mp3",
+            url: "http://86.105.205.246:30130/?stream.nsv&type=mp3",
             genre: "Rockabilly",
             genreNumber: 13,
             stationNumber: 1
@@ -710,7 +710,7 @@ var musicarray   = [
         },
         {
             info: "Gutter Punk Radio",
-            url: "http://23.228.66.67:8000/;?stream.nsv&type=mp3",
+            url: "http://23.228.66.67:8000/?stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
             stationNumber: 1
@@ -724,14 +724,14 @@ var musicarray   = [
         },
         {
             info: "Radio No Future",
-            url: "http://37.187.124.134:8100/;?stream.nsv&type=mp3",
+            url: "http://37.187.124.134:8100/?stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
             stationNumber: 3
         },
         {
             info: "Punk Rock",
-            url: "http://199.87.239.197:8000/;?stream.nsv&type=mp3",
+            url: "http://199.87.239.197:8000/?stream.nsv&type=mp3",
             genre: "SKA PUNK",
             genreNumber: 15,
             stationNumber: 4
@@ -809,7 +809,7 @@ var musicarray   = [
         },
         {
             info: "Tropicalisima Bachata",
-            url: "http://50.7.56.2:8024/;?stream.nsv&type=mp3",
+            url: "http://50.7.56.2:8024/?stream.nsv&type=mp3",
             genre: "Latin",
             genreNumber: 17,
             stationNumber: 2
@@ -830,7 +830,7 @@ var musicarray   = [
         },
         {
             info: "Tropical 100 Bolero",
-            url: "http://108.54.234.102:8024/;?stream.nsv&type=mp3",
+            url: "http://108.54.234.102:8024/?stream.nsv&type=mp3",
             genre: "Latin",
             genreNumber: 17,
             stationNumber: 5
@@ -901,28 +901,28 @@ var musicarray   = [
         },
         {
             info: "CCMLF Radio",
-            url: "http://69.197.169.178:27488/;?stream.nsv&type=mp3",
+            url: "http://69.197.169.178:27488/?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 2
         },
         {
             info: "DFW Caribbean",
-            url: "http://69.197.169.178:30202/;?stream.nsv&type=mp3",
+            url: "http://69.197.169.178:30202/?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 3
         },
         {
             info: "NLR Roots",
-            url: "http://91.121.205.70:4062/;?stream.nsv&type=mp3",
+            url: "http://91.121.205.70:4062/?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 4
         },
         {
             info: "UPYD 692 ",
-            url: "http://91.121.205.70:4062/;?stream.nsv&type=mp3",
+            url: "http://91.121.205.70:4062/?stream.nsv&type=mp3",
             genre: "Reggae",
             genreNumber: 19,
             stationNumber: 5
@@ -1343,7 +1343,7 @@ try {
         console.log("Favorite Stations Loaded");
     } else {
         favorites = [];
-        alert("Hello! Your favorites list has been cleared OR you don't have any favorite stations yet.");
+        alert("Hello! Your favorites list has been cleared OR you don't have any favorite stations yet. This app uses cookies to store your favorite stations, we do not collect any personal data with cookies.");
     }
 } catch (e){
     console.log(e);
@@ -1357,7 +1357,7 @@ try {
 
 
 $("#add-fav").click(function(){
-    if (favorites.length <20){
+    if (favorites.length <30){
         var save = undefined;
         favorites.push(player.station);
         save = JSON.stringify(favorites);
@@ -1368,7 +1368,7 @@ $("#add-fav").click(function(){
         alert(player.station.info + " saved in your favorites list");
         setTimeout(window.location.reload(), 100);
     } else {
-        alert("Sorry, Only 20 Favorites can be saved.");
+        alert("Sorry, Only 30 Favorites can be saved.");
         setTimeout(window.location.reload(), 100);
     }
     makeFavorites();
