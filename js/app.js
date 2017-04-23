@@ -243,7 +243,7 @@ var musicarray   = [
     [
         {
             info: "TTTRadio.NET",
-            url: "http://69.143.55.164/;?stream.nsv&type=mp3",
+            url: "http://69.143.55.164/?stream.nsv&type=mp3",
             genre: "Rap",
             genreNumber: 5,
             stationNumber: 0
@@ -540,7 +540,7 @@ var musicarray   = [
         },
         {
             info: "Sonora Metal",
-            url: "http://46.105.122.141:6664/;?stream.nsv&type=mp3",
+            url: "http://46.105.122.141:6664/?stream.nsv&type=mp3",
             genre: "Hard Rock",
             genreNumber: 11,
             stationNumber: 3
@@ -692,7 +692,7 @@ var musicarray   = [
         },
         {
             info: "Brittania",
-            url: "http://5.189.151.48/;?stream.nsv&type=mp3",
+            url: "http://5.189.151.48/?stream.nsv&type=mp3",
             genre: "Alternative",
             genreNumber: 14,
             stationNumber: 5
