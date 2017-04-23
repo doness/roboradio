@@ -2,7 +2,6 @@
 
 var $animation   = document.getElementById("animation");
 var $speaker     = document.getElementsByClassName("speaker");
-var $pauseButton = document.getElementById("playPause");
 var favorites = [];
 var cookie = null;
 
@@ -955,7 +954,6 @@ function playMusic() {
     var vol = currentAudio.volume;
     currentAudio.src = player.station.url;
     player.paused = false;
-    //$($pauseButton).innerHTML = "";
     $($animation).removeClass("stopped");
     $($speaker).addClass("pulsing");
     currentAudio.volume = (vol / 4);
@@ -1230,9 +1228,6 @@ $(document).ready(function(){
         showPlayer();
         playMusic();
     });
-
-
-
 });
 
 
@@ -1277,15 +1272,6 @@ $(".station-triggers").click(function (e) {
     setStation(musicarray[newGenre][newStation]);
     showPlayer();
     playMusic();
-});
-
-$("#attenuate").click(function(){
-    if (currentAudio.volume === 0.20){
-        currentAudio.volume = 0.9;
-    } else {
-        currentAudio.volume = 0.20;
-    }
-
 });
 
 $("#volume-slider").mouseup(function(){
@@ -1337,7 +1323,6 @@ function getCookie(cname) {
 try {
     cookie = getCookie("favorites");
     if (!!cookie){
-        baked = JSON.parse(cookie);
         favorites = JSON.parse(cookie);
         makeFavorites();
         console.log("Favorite Stations Loaded");
@@ -1363,8 +1348,6 @@ $("#add-fav").click(function(){
         save = JSON.stringify(favorites);
         setCookie("favorites", save, 365);
         cookie = getCookie("favorites");
-        //baked = JSON.parse(cookie);
-        //favorites = baked;
         alert(player.station.info + " saved in your favorites list");
         setTimeout(window.location.reload(), 100);
     } else {
