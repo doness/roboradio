@@ -70,7 +70,7 @@
                 <button class="toy-button" data-toy="bubble-game/index.html">Bubbles</button>
                 <button class="toy-button" data-toy="blob-toy/index.html">Blob</button>
                 <button class="vis" id="vis-toggle">visuals</button>
-                <button class="vis" id="attenuate">Att</button>
+                <button class="vis" id="add-fav"> <i class="fa fa-star"></i> </button>
 
             </div>
             <div id="volume" class="text-center">
@@ -104,33 +104,39 @@
 <div id="genre-list">
 
     <div class="navigational-buttons">
-        <button class="btn btn-black list-genre-link pointer">Genres</button> <button class="btn btn-black list-station-link pointer"> Stations</button>
+        <button class="btn btn-black list-genre-link pointer">Genres</button>
+        <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
+        <button class="btn btn-black favorites-link pointer">Favorites</button>
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
 
 
     <div id="genres"><!--dynamically loaded by javascript -->
-    </div>
+    </div><br/><br/>
 </div>
 
 <div id="stations-list">
     <div class="navigational-buttons">
-        <button class="btn btn-black list-genre-link pointer">Genres</button> <button class="btn btn-black list-station-link pointer"> Stations</button>
+        <button class="btn btn-black list-genre-link pointer">Genres</button>
+        <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
+        <button class="btn btn-black favorites-link pointer">Favorites</button>
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
 
     <div id="stations"><!--dynamically loaded by javascript -->
-    </div>
+    </div><br/><br/>
 </div>
 
 
 
 <div id="about">
     <div class="navigational-buttons">
-        <button class="btn btn-black list-genre-link pointer">Genres</button> <button class="btn btn-black list-station-link pointer"> Stations</button>
+        <button class="btn btn-black list-genre-link pointer">Genres</button>
+        <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
+        <button class="btn btn-black favorites-link pointer">Favorites</button>
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
     <br/>
@@ -155,8 +161,10 @@
 
 <div id="colors">
     <div class="navigational-buttons">
-        <button class="btn btn-black list-genre-link pointer">Genres</button> <button class="btn btn-black list-station-link pointer"> Stations</button>
+        <button class="btn btn-black list-genre-link pointer">Genres</button>
+        <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
+        <button class="btn btn-black favorites-link pointer">Favorites</button>
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
 
@@ -171,6 +179,22 @@
     <p><button id="brown-theme" class="btn colorswitch" data-color="brown">BROWN</button><br/></p>
     <p><button id="yellow-theme" class="btn colorswitch" data-color="yellow">YELLOW</button><br/></p>
  </div>
+
+<div id="favorites-list">
+    <div class="navigational-buttons">
+        <button class="btn btn-black list-genre-link pointer">Genres</button>
+        <button class="btn btn-black list-station-link pointer"> Stations</button>
+        <button class="btn btn-black list-theme-link pointer">Themes</button>
+        <button class="btn btn-black favorites-link pointer">Favorites</button>
+        <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
+    </div>
+    <h1>Favorites</h1>
+    <!--Dynamically loaded by JavaScript -->
+    <div id="favorites">
+
+    </div>
+    <button class="btn btn-black" id="clear">Remove all</button>
+</div>
 
 <div id="advertisements">
     <p class="text-center"> Your Ad Here. </p>

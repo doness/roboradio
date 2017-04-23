@@ -1,9 +1,12 @@
 //  RoboRadio JavaScript Streaming Player by MSR Interactive
 
-var $animation = document.getElementById("animation");
-var $speaker = document.getElementsByClassName("speaker");
+var $animation   = document.getElementById("animation");
+var $speaker     = document.getElementsByClassName("speaker");
 var $pauseButton = document.getElementById("playPause");
-var musicarray = [
+var favorites = [];
+var cookie = null;
+
+var musicarray   = [
 
     //POP GENRE
     [
@@ -1051,15 +1054,16 @@ $("#about").hide();
 $("#colors").hide();
 $("#stations-list").hide();
 $("#toys").hide();
+$("#favorites-list").hide();
 
 function hideAllViews(){
     $("#genre-list").hide();
     $("#about").hide();
     $("#colors").hide();
     $("#stations-list").hide();
-    //$("#visuals").hide();
     $("section").hide();
     $("#toys").hide();
+    $("#favorites-list").hide();
 }
 
 //views
@@ -1083,6 +1087,19 @@ function showColors() {
 function showStations() {
     hideAllViews();
     $("#stations-list").fadeIn();
+}
+function showFavorites() {
+    hideAllViews();
+    $("#favorites-list").fadeIn();
+}
+
+function favoritesToggle() {
+    if ($("#favorites-list").is(":visible")) {
+        $("#favorites-list").hide();
+        showPlayer();
+    } else {
+        showFavorites();
+    }
 }
 
 
@@ -1152,6 +1169,10 @@ $("#colors-trigger").click(function () {
     colorsToggle();
 });
 
+$(".favorites-link").click(function(){
+    favoritesToggle();
+});
+
 $(".close-button").click(function () {
     showPlayer();
 });
@@ -1184,6 +1205,38 @@ $(".toy-button").click(function(e){
     $("#visuals").slideUp();
     $("#toys").show();
 });
+
+//create the favorites list from the array
+
+function makeFavorites(){
+    $("#favorites").html("");
+    for (i=0; i< favorites.length; i++) {
+        var text = ('<h3 class="pointer fav-triggers" data-favorite="' + i + '">' + favorites[i].info + "</h3>");
+        $("#favorites").append(text);
+    }
+}
+
+makeFavorites();
+
+
+// Click functions for the favorite triggers
+
+$(document).ready(function(){
+
+    $(".fav-triggers").click(function (e) {
+        var newStation = this.getAttribute("data-favorite");
+        console.log("Station Changed to " + favorites[newStation].info);
+        setStation(favorites[newStation]);
+        showPlayer();
+        playMusic();
+    });
+
+
+
+});
+
+
+
 
 //  create the genre list from the music array
 
@@ -1245,34 +1298,108 @@ $("#volume-slider").click(function(){
 $("#volume-slider").on("change",function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
-//$("#volume-slider").on("swipe",function(){
-//    currentAudio.volume = ($("#volume-slider")[0].value / 100);
-//});
+
+//Cookies
 
 
+function bakeCookie(name, value) {
+    var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+    document.cookie = cookie;
+}
+function eatCookie(name) {
+    var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+    result && (result = JSON.parse(result[1]));
+    return result;
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 
-//ID3 tagging
+try {
+    cookie = getCookie("favorites");
+    if (!!cookie){
+        baked = JSON.parse(cookie);
+        favorites = JSON.parse(cookie);
+        makeFavorites();
+        alert("Favorite Stations Loaded ");
+    } else {
+        favorites = [];
+        alert("No Cookie Found");
+    }
+} catch (e){
+    console.log(e);
+    console.log("Cookie was Broken");
+}
+
+
+$("#add-fav").click(function(){
+    if (favorites.length <5){
+        var save = undefined;
+        favorites.push(player.station);
+        save = JSON.stringify(favorites);
+        setCookie("favorites", save, 365);
+        cookie = getCookie("favorites");
+        //baked = JSON.parse(cookie);
+        //favorites = baked;
+        alert(player.station.info + " saved");
+        setTimeout(window.location.reload(), 300);
+    } else {
+        alert("Sorry, Only 5 Favorites can be saved.");
+    }
+    makeFavorites();
+
+});
+
+function delete_cookie( name ) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+
+$("#clear").click(function(){
+    favorites = [];
+    //delete_cookie("favorites");
+    var save = undefined;
+    //save = "";
+    setCookie("favorites", save, -100);
+    //cookie = getCookie("favorites");
+    ////baked = JSON.parse(cookie);
+    //favorites = [];
+    //makeFavorites();
+    console.log("cleared favorites");
+    setTimeout(window.location.reload(), 300);
+});
 
 //
-//document.querySelector('input[type="file"]').onchange = function(e) {
-//    var reader = new FileReader();
-//
-//    reader.onload = function(e) {
-//        var dv = new jDataView(this.result);
-//
-//        // "TAG" starts at byte -128 from EOF.
-//        // See http://en.wikipedia.org/wiki/ID3
-//        if (dv.getString(3, dv.byteLength - 128) == 'TAG') {
-//            var title = dv.getString(30, dv.tell());
-//            var artist = dv.getString(30, dv.tell());
-//            var album = dv.getString(30, dv.tell());
-//            var year = dv.getString(4, dv.tell());
-//        } else {
-//            // no ID3v1 data found.
-//        }
-//    };
-//
-//    reader.readAsArrayBuffer(this.files[0]);
-//};
-//
+//// Abra Cadabra
+//    $(".delete").click(function (e) {
+//        var deleteMe = this.getAttribute("data-fav");
+//        console.log(deleteMe);
+//        console.log("Deleting Station " + favorites[deleteMe].info);
+//        favorites.splice(deleteMe,1);
+//        save = JSON.stringify(favorites);
+//        console.log("saving" + save);
+//        setCookie("favorites", save, 365);
+//        cookie = getCookie("favorites");
+//        baked = JSON.parse(cookie);
+//        favorites = baked;
+//        makeFavorites();
+//    });
