@@ -8,6 +8,11 @@ body {
     color: snow;
     font-family: Century Gothic, sans-serif;
     border-radius: 5px;
+    background-image: url("../images/Robot-back.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100vh;
 }
 h3 {
     text-shadow: 1px 2px 2px #212121;
