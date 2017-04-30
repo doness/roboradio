@@ -1,9 +1,14 @@
-//  RoboRadio JavaScript Streaming Player by MSR Interactive
+//  RoboRadio JS Streaming Music Player copyright 2017 @ Michael Scott Riccardi - msrinteractive.com
+//  MIT open source license - please attribute credit to the original author by hyperlink and keep your source code open, as well.
 
-var $animation   = document.getElementById("animation");
-var $speaker     = document.getElementsByClassName("speaker");
-var favorites = [];
-var cookie = null;
+var favorites = []; //declare an empty array where favorite stations objects are kept before saving to a cookie with setCookie
+var cookie = null;  //declare a bull variable to use later to save cookies
+
+// the music array is a two dimensional array that stores an object for each station
+// the outer array separates genres, the inner area separates stations, each station is a single object
+// music is played by passing a station object into the setStation function and calling the playMusic function.
+// example: setStation(musicarray[0][0]); playMusic();
+// Music can be paused by calling the pause function - example: pause();
 
 var musicarray   = [
 
@@ -931,37 +936,48 @@ var musicarray   = [
 //End of musicarray
 ];
 
-// player functions
+// THE PLAYER LOGIC
 
+// set initial properties for the player object
 var player = {
     station: musicarray[0][0],
     paused: true,
     genreNumber: 0,
     stationNumber: 0
 };
-//initialize a volume level
+//initialize the audio object, and a volume level
 var currentAudio = new Audio(player.station.url);
 currentAudio.volume = 0.5;
-
-function pause() {
-    currentAudio.pause();
-    $($speaker).removeClass("pulsing");
-    $($animation).addClass("stopped");
-    player.paused = true;
-}
-
+// Defining the playMusic() function
+// Sets Vol based on previous volume. Sets the pause property to false. Starts the animation. reduces the volume to a quarter, starts the audio,
+// ramps the audio up to half at 250ms, and to full at 500ms
 function playMusic() {
     var vol = currentAudio.volume;
     currentAudio.src = player.station.url;
     player.paused = false;
-    $($animation).removeClass("stopped");
-    $($speaker).addClass("pulsing");
+    $("#animation").removeClass("stopped");
+    $(".speaker").addClass("pulsing");
     currentAudio.volume = (vol / 4);
     currentAudio.play();
     setTimeout(function(){currentAudio.volume = (vol / 2);},250);
     setTimeout(function(){currentAudio.volume = (vol / 1);},500);
 }
-
+// pauses audio, stops the animation, and sets the pause value to true
+function pause() {
+    currentAudio.pause();
+    $(".speaker").removeClass("pulsing");
+    $("#animation").addClass("stopped");
+    player.paused = true;
+}
+// Sets the station by accepting a new station object as a parameter, assigning it to the player object, and then playing it.
+function setStation(newStation) {
+    player.station = newStation;
+    player.stationNumber = newStation.stationNumber;
+    player.genreNumber = newStation.genreNumber;
+    $("#station-text").text(newStation.info);
+    $("#genre-text").text(newStation.genre);
+}
+// Starts the music if paused, pauses if playing.
 function startStopper() {
     if (player.paused === false) {
         pause();
@@ -970,18 +986,9 @@ function startStopper() {
     }
 }
 
-function setStation(newStation) {
-    player.station = newStation;
-    player.stationNumber = newStation.stationNumber;
-    player.genreNumber = newStation.genreNumber;
-    document.getElementById("station-text").innerHTML = newStation.info;
-    document.getElementById("genre-text").innerHTML = newStation.genre;
-}
-
-$($speaker).click(function () {
+$(".speaker").click(function () {
     setStation(player.station);
     startStopper();
-
 });
 
 $("#playPause").click(function () {
@@ -1285,18 +1292,7 @@ $("#volume-slider").on("change",function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
 
-//Cookies
-
-
-function bakeCookie(name, value) {
-    var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
-    document.cookie = cookie;
-}
-function eatCookie(name) {
-    var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
-    result && (result = JSON.parse(result[1]));
-    return result;
-}
+//Cookies - first... define the cookie functions
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -1319,7 +1315,7 @@ function getCookie(cname) {
     return "";
 }
 
-
+//on page load - load the cookie if it exists, if not create it, if it's broken overwrite it with a fresh cookie.
 try {
     cookie = getCookie("favorites");
     if (!!cookie){
@@ -1339,7 +1335,6 @@ try {
     console.log("cleared favorites");
     setTimeout(window.location.reload(), 300);
 }
-
 
 $("#add-fav").click(function(){
     if (favorites.length <30){
@@ -1361,7 +1356,6 @@ $("#add-fav").click(function(){
 function delete_cookie( name ) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
-
 
 $("#clear").click(function(){
     favorites = [];

@@ -110,7 +110,6 @@
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
 
-
     <div id="genres">
         <!--on page load this div is dynamically loaded by javascript based on the musicArray data structure.
          It will contain a list of H3 elements that display the genre names, and has data values that correspond to each genre.
@@ -135,6 +134,7 @@
          When clicked each H3 passes the data-value into the setStation function and then calls the playMusic function.  -->
     </div><br/><br/>
 </div>
+
 <div id="about">
     <div class="navigational-buttons">
         <!--Navigation buttons call jQuery hide and show methods to switch the view being displayed -->
@@ -145,7 +145,6 @@
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
     <br/>
-
     <h1>About This App </h1>
     <h4>Created by
         <a href="http://msrinteractive.com" target="_blank">Mike Riccardi </a> </h4>
@@ -159,8 +158,6 @@
         Bubbles Game originally created by <a href="http://codepen.io/jkantner/" target="_blank">Jon Kantner</a> licensed under MIT. <br/>
         Enjoy!<br/>
     </p>
-
-
     <p class="text-center"> <a class="btn btn-black contact-button" href="http://msrinteractive.com/portfolio/contact.php" target="_blank">Contact Us</a> <br/> </p>
 </div>
 
@@ -173,7 +170,6 @@
         <button class="btn btn-black favorites-link pointer">Favorites</button>
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
-
     <h1> Color themes </h1>
     <!--The coloswitch class has a click function associated with it that applies the corresponding theme by data-color.
       It assigns an href value to the link tag in the head of the document that loads the corresponding CSS stylesheet-->
@@ -213,18 +209,15 @@
 </div>
 
 <div id="advertisements">
-        <!-- Admob integration or load HTML img and anchor tags from a JavaScript array here  -->
+        <!-- admob integration or load HTML img and anchor tags from a JavaScript array here  -->
     <p class="text-center"> Your Ad Here. </p>
 </div>
-
 <div class="about-button">
     <h2 class="text-center">
         <!--robot icon - when clicked it loads the 'about' view -->
         <img src="images/Robot.svg.png" class="robot pointer" id="robot">
     </h2>
 </div>
-
-
 </body>
 <!--loading jQuery abd Bootstrap JavaScript -->
 <script src="js/jquery-3.2.0.min.js"></script>
