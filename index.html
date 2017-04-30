@@ -1,110 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--RoboRadio JS application by Michael Scott Riccardi msrinteractive.com -->
+    <!--All the application magic happens in  /js/app.js -->
     <meta charset="UTF-8">
     <title>Robo-Radio</title>
-    <!--Don't forget to add SEO meta tags later -->
+    <!--Don't forget to add SEO meta tags here -->
     <link rel="shortcut icon" href="favicon.png" />
-
+    <!--Loading all the things. No CDNs -->
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link href="css/animate.css-master/animate.css" type="text/css" rel="stylesheet">
     <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link href="" type="text/css" rel="stylesheet" title="red" id="theme-switcher">
-    <!--viewport meta tag-->
+    <!--This link tag's href is initially left blank to be populated by the .color-switch button click functions -->
+    <link href="" type="text/css" rel="stylesheet" id="theme-switcher">
+    <!--viewport scaling? Yes, please. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<!--NAV-BAR REMOVED  -->
-
+<!-- We don't need no stinkin' nav-bar, but normally you would see that right here-->
 <section class="app">
 <div class="container">
     <div class="row">
-
-
         <div class="col-xs-12">
             <img src="images/speaker.png" class="speaker" id="left-speaker">
             <img src="images/speaker.png" class="speaker" id="right-speaker">
             <div class="station-info">
-
-
+                <!-- This text is updated when the setStation function is called -->
                 <h1 class="text-center" id="station-text">
                     Welcome to
                 </h1>
-
-
+                <!-- This text is updated when the setStation function is called -->
                 <h5 class="text-center" id="genre-text">
-
                     RoboRadio Ver 1.1
-
                 </h5>
-
             </div>
 
             <div class="top-buttons">
-
+                <!--These buttons select and play a station within the current genre
+                by calling a click function attached to the number-button class, which
+                then passes in a the data-station value when calling the setStation and playMusic functions -->
                 <button class="number-button" id="1" data-station="0">1</button>
                 <button class="number-button" id="2" data-station="1">2</button>
                 <button class="number-button" id="3" data-station="2">3</button>
                 <button class="number-button" id="4" data-station="3">4</button>
                 <button class="number-button" id="5" data-station="4">5</button>
                 <button class="number-button" id="6" data-station="5">6</button>
-
             </div>
-
+            <!--The main player buttons -->
             <div class="player-buttons-flex">
+                <!--show-lists calls the showGenre button which hides everything else, and displays the #genre-list div-->
                 <button id="show-lists"><i class="glyphicon glyphicon-folder-open"></i>  </button>
+                <!--genre-next advances you to the next genre using the setStation and playMusic functions  -->
                 <button class="genre-next" id="genre-next"><i class="glyphicon glyphicon-fast-forward"></i> </button>
+                <!--step-forward advances you to the next station in current genre using the setStation and playMusic functions -->
                 <button id="step-forward"><i class="glyphicon glyphicon-step-forward"></i></button>
+                <!--random selects a random station object from the musicArray passes it into setStation and calls playMusic-->
                 <button id="random"> <i class="fa fa-random"></i> </button>
+                <!--calls startStopper which checks the player object for the value 'paused', if paused is true- it calls the playMusic function.
+                if the paused value on the player is false, it calls the pause function -->
                 <button id="playPause"><i class="glyphicon glyphicon-play"></i><i class="glyphicon glyphicon-pause"></i></button>
             </div>
-
         </div><!-- col -->
 
         <div class="col-xs-12">
+            <!--the lower set of buttons control the themes toys and visuals -->
             <div class="text-center lower-buttons">
+                <!--theme-player-buttons calls the showColors function which hides other views and displays the #colors div -->
                 <button id="theme-player-button"> &nbsp;</button>
+                <!--Game button adds the bubble-game/index.html value to the iframe src attribute causing the bubble game to be visible -->
                 <button class="toy-button" data-toy="bubble-game/index.html">Game</button>
+                <!--Blob button adds the bubble-game/index.html value to the iframe src attribute causing the blob toy to be visible -->
                 <button class="toy-button" data-toy="blob-toy/index.html">Blob</button>
+                <!--Vis button runs the visToggle function which toggles the slide down drawer and visualizer bars -->
                 <button class="vis" id="vis-toggle">Vis</button>
+                <!--Favs button runs the favoritesToggle function which hides all other views and displays the #favorites-list div  -->
                 <button class="vis favorites-link">Favs</button>
+                <!--add-fav [star button] takes the current station in the player object, adds it to the favorites array as a string,
+                then saves the favorites array as a cookie, and reloads the page, which reloads the favorites list from the cookie. -->
                 <button class="vis" id="add-fav"> <i class="fa fa-star"></i> </button>
-
             </div>
             <div id="volume" class="text-center">
-
+                <!--Volume slider calls mouseup, click, and onchange functions that set the value to the currentAudio.volume -->
                 <input type="range" name="vol" id="volume-slider">
                 <label>Volume</label>
-
-
             </div>
-
+            <!--This div is only visible when toggle with the visToggle function, it shows the visualizer animation -->
             <div class="text-center" id="visuals">
-
                     <img src="images/hoverboard.gif" class="img-responsive" id="hoverboard"/>
-
-
             </div>
-
         </div>
-
-
     </div><!--row -->
+</div><!--container -->
+</section><!--section class 'app' -->
 
-</div>
-</section>
+<!--Everything below this point is initially hidden until shown using jQuery methods-->
 
-
+<!--This iframe tag is initially left blank so that it can be populated by javascript with the game or blob URL values -->
 <iframe src="" id="toys"></iframe>
 
-<!--Additional Views are below this point these are hidden until jQuery show is called -->
-
 <div id="genre-list">
-
     <div class="navigational-buttons">
+        <!--Navigation buttons call jQuery hide and show methods to switch the view being displayed -->
         <button class="btn btn-black list-genre-link pointer">Genres</button>
         <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
@@ -113,12 +111,16 @@
     </div>
 
 
-    <div id="genres"><!--dynamically loaded by javascript -->
+    <div id="genres">
+        <!--on page load this div is dynamically loaded by javascript based on the musicArray data structure.
+         It will contain a list of H3 elements that display the genre names, and has data values that correspond to each genre.
+         When clicked each H3 passes the data-value into the setStation function and then calls the playMusic function.  -->
     </div><br/><br/>
 </div>
 
 <div id="stations-list">
     <div class="navigational-buttons">
+        <!--Navigation buttons call jQuery hide and show methods to switch the view being displayed -->
         <button class="btn btn-black list-genre-link pointer">Genres</button>
         <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
@@ -126,14 +128,16 @@
         <button class="btn btn-black close-button"> <i class="fa fa-window-close-o close-button"></i></button>
     </div>
 
-    <div id="stations"><!--dynamically loaded by javascript -->
+    <div id="stations">
+        <!--on page load this div is dynamically loaded by javascript based on the musicArray data structure.
+         It will contain a list of H3 elements that display the station names from each genre and also a subtitle with the genre name
+         Each station has data values that correspond to the station and genre.
+         When clicked each H3 passes the data-value into the setStation function and then calls the playMusic function.  -->
     </div><br/><br/>
 </div>
-
-
-
 <div id="about">
     <div class="navigational-buttons">
+        <!--Navigation buttons call jQuery hide and show methods to switch the view being displayed -->
         <button class="btn btn-black list-genre-link pointer">Genres</button>
         <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
@@ -162,6 +166,7 @@
 
 <div id="colors">
     <div class="navigational-buttons">
+        <!--Navigation buttons call jQuery hide and show methods to switch the view being displayed -->
         <button class="btn btn-black list-genre-link pointer">Genres</button>
         <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
@@ -170,6 +175,8 @@
     </div>
 
     <h1> Color themes </h1>
+    <!--The coloswitch class has a click function associated with it that applies the corresponding theme by data-color.
+      It assigns an href value to the link tag in the head of the document that loads the corresponding CSS stylesheet-->
     <p><button id="default-blue-theme" class="btn colorswitch" data-color="default-blue">BLUE</button><br/></p>
     <p><button id="red-theme" class="btn colorswitch" data-color="red">RED</button><br/></p>
     <p><button id="green-theme" class="btn colorswitch" data-color="green">GREEN</button><br/></p>
@@ -183,6 +190,7 @@
 
 <div id="favorites-list">
     <div class="navigational-buttons">
+        <!--Navigation buttons call jQuery hide and show methods to switch the view being displayed -->
         <button class="btn btn-black list-genre-link pointer">Genres</button>
         <button class="btn btn-black list-station-link pointer"> Stations</button>
         <button class="btn btn-black list-theme-link pointer">Themes</button>
@@ -192,25 +200,35 @@
     <h1>Favorites</h1>
     <!--Dynamically loaded by JavaScript -->
     <div id="favorites">
-
+        <!--on page load this div is dynamically loaded by javascript based the data saved in your 'favorites' cookie.
+            It also updates the 'favorites' array with the values found in the cookie, so that the favorites array can be
+            amended, updated, and saved to the cookie [overwritten].
+            The div will contain a list of H3 elements that show the station names or each favorite.
+            Each station has data values that correspond to the station and genre.
+            When clicked each H3 passes the data-value into the setStation function and then calls the playMusic function.  -->
     </div>
+        <!--This button removes all stations from the favorites array, overwrites the cookie, and reloads the page and cookie.  -->
     <button class="btn btn-black" id="clear">Remove all</button>
     <br/><br/>
 </div>
 
 <div id="advertisements">
+        <!-- Admob integration or load HTML img and anchor tags from a JavaScript array here  -->
     <p class="text-center"> Your Ad Here. </p>
 </div>
 
 <div class="about-button">
     <h2 class="text-center">
+        <!--robot icon - when clicked it loads the 'about' view -->
         <img src="images/Robot.svg.png" class="robot pointer" id="robot">
     </h2>
 </div>
 
 
 </body>
+<!--loading jQuery abd Bootstrap JavaScript -->
 <script src="js/jquery-3.2.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!--loading the RoboRadio JS app -->
 <script src="js/app.js"></script>
 </html>

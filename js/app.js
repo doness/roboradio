@@ -939,9 +939,9 @@ var player = {
     genreNumber: 0,
     stationNumber: 0
 };
-
+//initialize a volume level
 var currentAudio = new Audio(player.station.url);
-currentAudio.volume = 0.8;
+currentAudio.volume = 0.5;
 
 function pause() {
     currentAudio.pause();
