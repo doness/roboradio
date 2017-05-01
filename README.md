@@ -30,7 +30,7 @@ Example:
 setStation(musicArray[1][4]);
 playMusic();
 
-Play and Pause 
+Play and Pause -
 The music can be paused or played by calling the pause() method with a click function.
 
 Player buttons - 
