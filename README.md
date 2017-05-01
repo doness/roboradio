@@ -4,6 +4,8 @@ View the live demo at:
 https://msrinteractive.github.io/roboradio/
 
 This is a front-end javascript application. There are no server compilers required. Just plain old JavaScript and jQuery.
+MAKE SURE TO LOAD JQUERY BEFORE YOU LOAD THIS SCRIPT IN YOUR HTML.
+
 I will attempt to quickly outline how it works here, but please refer to the comments within the code for further explanation.
 
 musicArray- The radio stations info, station number, genre number, genre info, and stream URL are saved as objects within the two dimensional musicArray. Each genre begins another value in the outer array, the inner arrays contain 6 station objects for each genre.
