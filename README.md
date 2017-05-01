@@ -16,7 +16,7 @@ example:
     stationNumber: 0
 }
 
-The player object- The player object is where all the magic happens. To play music: first a station is assigned to the player object by the setStation method, and then the playMusic method assigns the player.station.url to the currentAudio.src and runs currenAudio.play();
+The player object- The player object is where all the magic happens. To play music: first a station is assigned to the player object by the setStation method, and then the playMusic method assigns the player.station.url to the currentAudio.src and runs currentAudio.play();
 example: 
 var player = {
     station: musicarray[0][0],
