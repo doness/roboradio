@@ -1,4 +1,4 @@
-A JavaScript Streaming Music Player.
+A JavaScript Streaming Music Player. The code for this application is in /js/app.js
 
 View the live demo at:
 https://msrinteractive.github.io/roboradio/
