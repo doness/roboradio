@@ -16,6 +16,9 @@ example:
     stationNumber: 0
 }
 
+Adding stations - 
+You can add stations following the same data structure. Simply add another outer array to the musicArray that contains 6 station objects with all of the same properties as shown above. (info, url, genre, genreNumber, and stationNumber) Station number should be 0 through 5 and genreNumber should be whatever the next logical # is in the series based on the rest of the array. 
+
 The player object- The player object is where all the magic happens. To play music: first a station is assigned to the player object by the setStation method, and then the playMusic method assigns the player.station.url to the currentAudio.src and runs currentAudio.play();
 example: 
 var player = {
