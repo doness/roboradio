@@ -1,15 +1,21 @@
-//  RoboRadio JS Streaming Music Player copyright 2017 @ Michael Scott Riccardi - msrinteractive.com
-//  MIT open source license - please attribute credit to the original author by hyperlink and keep your source code open, as well.
+// ROBORADIO
+
+// RoboRadio JS Streaming Music Player copyright 2017 @ Michael Scott Riccardi - msrinteractive.com
+// MIT open source license - please attribute credit to the original author by hyperlink and keep your source code open, as well.
 
 var favorites = []; //declare an empty array where favorite stations objects are kept before saving to a cookie with setCookie
 var cookie = null;  //declare a bull variable to use later to save cookies
 
-// the music array is a two dimensional array that stores an object for each station
-// the outer array separates genres, the inner area separates stations, each station is a single object
+// THE PLAYER
+
 // music is played by passing a station object into the setStation function and calling the playMusic function.
 // example: setStation(musicarray[0][0]); playMusic();
 // Music can be paused by calling the pause function - example: pause();
 
+// THE MUSIC
+
+// the music array is a two dimensional array that stores an object for each station
+// the outer array separates genres, the inner area separates stations, each station is a single object
 var musicarray   = [
 
     //POP GENRE
@@ -985,19 +991,18 @@ function startStopper() {
         playMusic();
     }
 }
-
+// when the speaker is clicked, start or stop the music
 $(".speaker").click(function () {
     setStation(player.station);
     startStopper();
 });
-
+// when play/pause is clicked, start or stop the music
 $("#playPause").click(function () {
     setStation(player.station);
     startStopper();
 });
-
+// advances to the next station in a genre, if your current station is 6, it goes back to the first [0] index station for that genre.
 $("#step-forward").click(function () {
-
     if (player.stationNumber < musicarray[player.genreNumber].length - 1) {
         setStation(musicarray[player.genreNumber][(player.stationNumber + 1)]);
         playMusic();
@@ -1008,9 +1013,8 @@ $("#step-forward").click(function () {
         playMusic();
         console.log("Step-Forward " + player.station.info);
     }
-
 });
-
+// advances to the next genre, if you are playing the last genre in the array, it goes back to the first [0] index genre.
 $("#genre-next").click(function () {
     if (player.genreNumber < musicarray.length - 1) {
         setStation(musicarray[(player.genreNumber + 1)][0]);
@@ -1022,7 +1026,7 @@ $("#genre-next").click(function () {
         console.log("Change to Genre " + player.station.genre);
     }
 });
-
+// picks a random genre, and a random station, sets the station, and plays the music.
 $("#random").click(function () {
     pickGenre = Math.floor(Math.random() * musicarray.length);
     pickSong = Math.floor(Math.random() * musicarray[pickGenre].length);
@@ -1030,17 +1034,13 @@ $("#random").click(function () {
     playMusic();
     console.log("Picked random " + player.station.genre + " " + player.station.info);
 });
-
+// grabs the data-station value from the button and sets the station to that number with the current genre, and restarts the music.
 $(".number-button").click(function (e) {
     newStation = this.getAttribute('data-station');
     setStation(musicarray[player.genreNumber][newStation]);
     playMusic();
 });
-
-
-//  color switching
-
-
+// grabs the data-color value and sets enables the corresponding CSS stylesheet
 $(".colorswitch").click(function (e) {
     var newColor = this.getAttribute("data-color");
     var css = "css/" + newColor + ".css";
@@ -1048,12 +1048,9 @@ $(".colorswitch").click(function (e) {
     console.log("Colors changed to " + newColor);
     showPlayer();
 });
-
-
 // DYNAMIC VIEWS
-// ------------------------------
 
-// hide the other views initially so they don't appear until called
+// hide views (except the player) initially so they don't appear until called
 $("#genre-list").hide();
 $("#about").hide();
 $("#colors").hide();
@@ -1061,6 +1058,7 @@ $("#stations-list").hide();
 $("#toys").hide();
 $("#favorites-list").hide();
 
+// define a function that hides everything
 function hideAllViews(){
     $("#genre-list").hide();
     $("#about").hide();
@@ -1071,7 +1069,7 @@ function hideAllViews(){
     $("#favorites-list").hide();
 }
 
-//views
+// The following view functions use jQuery to show and hide the desired elements
 
 function showPlayer() {
     hideAllViews();
@@ -1097,7 +1095,6 @@ function showFavorites() {
     hideAllViews();
     $("#favorites-list").fadeIn();
 }
-
 function favoritesToggle() {
     if ($("#favorites-list").is(":visible")) {
         $("#favorites-list").hide();
@@ -1106,8 +1103,6 @@ function favoritesToggle() {
         showFavorites();
     }
 }
-
-
 function genreToggle() {
     if ($("#genre-list").is(":visible")) {
         $("#genre-list").hide();
@@ -1116,7 +1111,6 @@ function genreToggle() {
         showGenre();
     }
 }
-
 function aboutToggle() {
     if ($("#about").is(":visible")) {
         $("#about").hide();
@@ -1125,7 +1119,6 @@ function aboutToggle() {
         showAbout();
     }
 }
-
 function colorsToggle() {
     if ($("#colors").is(":visible")) {
         $("#colors").hide();
@@ -1150,9 +1143,7 @@ function visToggle() {
         $("#visuals").slideDown();
     }
 }
-
-
-//navigation for views
+// Navigation- provide click functions to call the dynamic views
 
 $("#genre-list-trigger").click(function () {
     genreToggle();
@@ -1203,7 +1194,8 @@ $("#show-lists").click(function(){
 $("#theme-player-button").click(function(){
     showColors();
 });
-
+// the toy-button click function grabs the data-toy attribute and sets the src attribute on the iframe to the corresponding selection
+// this loads either the blob or the game into the bottom part of the screen and hides the visualizer if it's visible
 $(".toy-button").click(function(e){
     var newToy = this.getAttribute("data-toy");
     $("#toys").attr("src", newToy);
@@ -1211,8 +1203,10 @@ $(".toy-button").click(function(e){
     $("#toys").show();
 });
 
-//create the favorites list from the array
-
+// create the favorites list from the favorites array
+// previously, when the script initializes, the favorites array is populated by the getCookie function
+// the makeFavorites function iterates through the favorites array and creates H3 elements for each favorite station.
+// it assigns a data-favorite value for each element that corresponds to the station in the favorites array.
 function makeFavorites(){
     $("#favorites").html("");
     for (i=0; i< favorites.length; i++) {
@@ -1220,14 +1214,11 @@ function makeFavorites(){
         $("#favorites").append(text);
     }
 }
-
+// call the function to populate the list
 makeFavorites();
 
-
-// Click functions for the favorite triggers
-
 $(document).ready(function(){
-
+// this click function grabs the data-favorite value from your selection in the list, sets the station, and then plays the music
     $(".fav-triggers").click(function (e) {
         var newStation = this.getAttribute("data-favorite");
         console.log("Station Changed to " + favorites[newStation].info);
@@ -1237,18 +1228,14 @@ $(document).ready(function(){
     });
 });
 
-
-
-
-//  create the genre list from the music array
-
+// create the genre list from the music array
+// iterates through the array and creates an H3 element for each genre, and assigns a data-genre value for the H3 that corresponds.
 for (i = 0; i < musicarray.length; i++) {
     var text = ('<h3 class="genre-triggers" data-genre="' + i + '">' + musicarray[i][0].genre + "</h3>");
     $("#genres").append(text);
 }
 
-//  Here's the Magic
-
+//  Click function for the H3 elements - grabs the data-genre value and sets the station accordingly and runs the playMusic function
 $(".genre-triggers").click(function (e) {
     var newGenre = this.getAttribute("data-genre");
     console.log("Genre Changed to " + musicarray[newGenre][0].genre);
@@ -1258,8 +1245,8 @@ $(".genre-triggers").click(function (e) {
 });
 
 // create the stations list from the music array
-
-
+// iterates through the array and creates an H3 element for each station from each genre, and assigns a data-genre value for the
+// H3 that corresponds. Also, creates an H2 title for each genre with the genre name.
 for (i = 0; i < musicarray.length; i++) {
     var genreName = ('<h2 class="genre-names">' + musicarray[i][0].genre + '</h2>'  );
     $("#stations").append(genreName);
@@ -1269,9 +1256,7 @@ for (i = 0; i < musicarray.length; i++) {
     }
 
 }
-
-// a little more magic
-
+// Click function for the H3 elements - grabs the data-station value and sets the station accordingly and runs the playMusic function
 $(".station-triggers").click(function (e) {
     var newGenre = this.getAttribute("data-genre");
     var newStation = this.getAttribute("data-station");
@@ -1280,11 +1265,10 @@ $(".station-triggers").click(function (e) {
     showPlayer();
     playMusic();
 });
-
+// volume functions
 $("#volume-slider").mouseup(function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
-
 $("#volume-slider").click(function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
@@ -1292,8 +1276,7 @@ $("#volume-slider").on("change",function(){
     currentAudio.volume = ($("#volume-slider")[0].value / 100);
 });
 
-//Cookies - first... define the cookie functions
-
+//Cookies!!! first... define the cookie functions
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -1314,8 +1297,7 @@ function getCookie(cname) {
     }
     return "";
 }
-
-//on page load - load the cookie if it exists, if not create it, if it's broken overwrite it with a fresh cookie.
+//on page load - load the cookie if it exists, if not create it, if it's broken catch the error, and overwrite it with a fresh cookie.
 try {
     cookie = getCookie("favorites");
     if (!!cookie){
@@ -1328,14 +1310,14 @@ try {
     }
 } catch (e){
     console.log(e);
-    alert("Your favorites list got broken, sorry. I will fix it for you.");
+    alert("Something happened. Your favorites list could not be loaded, sorry. I will fix it for you.");
     favorites = [];
     var save = undefined;
     setCookie("favorites", save, -100);
     console.log("cleared favorites");
     setTimeout(window.location.reload(), 300);
 }
-
+// click function for the star button - adds the current station from the player object into the favorites array, and then saves the cookie.
 $("#add-fav").click(function(){
     if (favorites.length <30){
         var save = undefined;
@@ -1347,16 +1329,9 @@ $("#add-fav").click(function(){
         setTimeout(window.location.reload(), 100);
     } else {
         alert("Sorry, Only 30 Favorites can be saved.");
-        setTimeout(window.location.reload(), 100);
     }
-    makeFavorites();
-
 });
-
-function delete_cookie( name ) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
-
+// click function that deletes the favorites list and reloads the display
 $("#clear").click(function(){
     favorites = [];
     var save = undefined;
